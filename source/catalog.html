@@ -7,21 +7,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body class="page__body">
-<header class="page__header page__header--index">
+<header class="page__header page__header--catalog">
   <nav class="main-nav">
-    <a class="main-nav__logo"></a>
-    <button class="main-nav__toggle">
+    <a class="main-nav__logo" href="index.html">
+      <img src="" alt="Погнали" class="main-nav__logo-img">
+    </a>
+    <button class="main-nav__toggle" type="button">
       <span class="visually-hidden main-nav__toggle-text">Открыть меню</span>
     </button>
     <ul class="main-nav__list site-list">
       <li class="site-list__item">
-        <a class="site-list__link" href="">О сервисе</a>
+        <a class="site-list__link" href="index.html">О сервисе</a>
       </li>
       <li class="site-list__item">
         <a class="site-list__link" href="">Направления</a>
       </li>
       <li class="site-list__item">
-        <a class="site-list__link" href="">Попутчики</a>
+        <a class="site-list__link">Попутчики</a>
       </li>
     </ul>
     <ul class="main-nav__list contacts-list contacts-list--full">
@@ -52,7 +54,7 @@
   <h1 class="page-main__heading">Попутчики</h1>
   <section class="country-filter section">
     <h2 class="country-filter__heading">Фильтрация по странам:</h2>
-    <button class="country-filter__toggle">Закрыть</button>
+    <button class="country-filter__toggle" type="button">Закрыть</button>
     <ul class="country-filter__continents">
       <li class="country-filter__continents-item">
         <a href="#" class="country-filter__continents-link">Европа</a>
@@ -67,43 +69,33 @@
         <a href="#" class="country-filter__continents-link">Острова</a>
       </li>
     </ul>
-    <table class="country-filter__table country-table">
-      <tr class="county-table__row">
-        <td class="country-table__item">А</td>
-        <td class="country-table__item">Б</td>
-        <td class="country-table__item">В</td>
-        <td class="country-table__item">Г</td>
-        <td class="country-table__item">Д</td>
-      </tr>
-      <tr class="county-table__row">
-        <td class="country-table__item">Е</td>
-        <td class="country-table__item">З</td>
-        <td class="country-table__item">И</td>
-        <td class="country-table__item">К</td>
-        <td class="country-table__item">Л</td>
-      </tr>
-      <tr class="county-table__row">
-        <td class="country-table__item">М</td>
-        <td class="country-table__item">Н</td>
-        <td class="country-table__item">О</td>
-        <td class="country-table__item">П</td>
-        <td class="country-table__item">Р</td>
-      </tr>
-      <tr class="county-table__row">
-        <td class="country-table__item">С</td>
-        <td class="country-table__item">Т</td>
-        <td class="country-table__item">У</td>
-        <td class="country-table__item">Ф</td>
-        <td class="country-table__item">Х</td>
-      </tr>
-      <tr class="county-table__row">
-        <td class="country-table__item">Ч</td>
-        <td class="country-table__item">Ш</td>
-        <td class="country-table__item">Э</td>
-        <td class="country-table__item">Ю</td>
-        <td class="country-table__item">Я</td>
-      </tr>
-    </table>
+    <ul class="country-filter__list country-list">
+        <li class="country-list__item">А</li>
+        <li class="country-list__item">Б</li>
+        <li class="country-list__item">В</li>
+        <li class="country-list__item">Г</li>
+        <li class="country-list__item">Д</li>
+        <li class="country-list__item">Е</li>
+        <li class="country-list__item">З</li>
+        <li class="country-list__item">И</li>
+        <li class="country-list__item">К</li>
+        <li class="country-list__item">Л</li>
+        <li class="country-list__item">М</li>
+        <li class="country-list__item">Н</li>
+        <li class="country-list__item">О</li>
+        <li class="country-list__item">П</li>
+        <li class="country-list__item">Р</li>
+        <li class="country-list__item">С</li>
+        <li class="country-list__item">Т</li>
+        <li class="country-list__item">У</li>
+        <li class="country-list__item">Ф</li>
+        <li class="country-list__item">Х</li>
+        <li class="country-list__item">Ч</li>
+        <li class="country-list__item">Ш</li>
+        <li class="country-list__item">Э</li>
+        <li class="country-list__item">Ю</li>
+        <li class="country-list__item">Я</li>
+    </ul>
     <ul class="country-filter__sort country-sort">
       <li class="country-sort__item">
         <p class="country-sort__letter">А</p>
@@ -723,85 +715,73 @@
         </ul>
       </li>
     </ul>
-    <button class="country-filter__button">Свернуть</button>
+    <button class="country-filter__button" type="button">Свернуть</button>
   </section>
   <section class="companion-filter">
     <h2 class="companion-filter__heading">Подберите идеального попутчика</h2>
     <form class="companion-filter__form companion-form" action="https://echo.htmlacademy.ru" method="post">
       <div class="companion-form__item">
         <p class="companion-form__heading">Хобби</p>
-        <button class="companion-form__toggle-button">Закрыть</button>
-        <label class="companion-form__label">
-          Спортзал
-          <input type="checkbox" name="gym" class="companion-form__input">
-        </label>
-        <label class="companion-form__label">
-          Кальян
-          <input type="checkbox" name="hookah" class="companion-form__input">
-        </label>
-        <label class="companion-form__label">
-          Диван
-          <input type="checkbox" name="sofa" class="companion-form__input">
-        </label>
+        <button class="companion-form__toggle-button" type="button">
+          <span class="visually-hidden">Закрыть</span>
+        </button>
+        <input type="checkbox" name="gym" id="gym" class="companion-form__input">
+        <label class="companion-form__label" for="gym">Спортзал</label>
+        <input type="checkbox" name="hookah" id="hookah" class="companion-form__input">
+        <label class="companion-form__label" for="hookah">Кальян</label>
+        <input type="checkbox" name="sofa" id="sofa" class="companion-form__input">
+        <label class="companion-form__label" for="sofa">Диван</label>
       </div>
       <div class="companion-form__item">
         <p class="companion-form__heading">Музыка</p>
-        <button class="companion-form__toggle-button">Закрыть</button>
-        <label class="companion-form__label">
-          Тяжелый рок
-          <input type="checkbox" name="gym" class="companion-form__input">
-        </label>
-        <label class="companion-form__label">
-          Русский рэп
-          <input type="checkbox" name="hookah" class="companion-form__input">
-        </label>
-        <label class="companion-form__label">
-          Евродэнс
-          <input type="checkbox" name="sofa" class="companion-form__input">
-        </label>
+        <button class="companion-form__toggle-button" type="button">Закрыть</button>
+        <input type="checkbox" name="hard-rock" id="hard-rock" class="companion-form__input">
+        <label class="companion-form__label" for="hard-rock">Тяжелый рок</label>
+        <input type="checkbox" name="russian-rap" id="russian-rap" class="companion-form__input">
+        <label class="companion-form__label" for="russian-rap">Русский рэп</label>
+        <input type="checkbox" name="eurodance" id="eurodance" class="companion-form__input">
+        <label class="companion-form__label" for="eurodance">Евродэнс</label>
       </div>
       <div class="companion-form__item">
         <p class="companion-form__heading">Еда</p>
-        <button class="companion-form__toggle-button">Закрыть</button>
-        <label class="companion-form__label">
-          Мясоед
-          <input type="checkbox" name="gym" class="companion-form__input">
-        </label>
-        <label class="companion-form__label">
-          Сидит на ПП
-          <input type="checkbox" name="hookah" class="companion-form__input">
-        </label>
-        <label class="companion-form__label">
-          Веган-сыроед
-          <input type="checkbox" name="sofa" class="companion-form__input">
-        </label>
+        <button class="companion-form__toggle-button" type="button">Закрыть</button>
+        <input type="checkbox" name="meat" id="meat"  class="companion-form__input">
+        <label class="companion-form__label" for="meat">Мясоед</label>
+        <input type="checkbox" name="healthy" id="healthy" class="companion-form__input">
+        <label class="companion-form__label" for="healthy">Сидит на ПП</label>
+        <input type="checkbox" name="vegan" id="vegan" class="companion-form__input">
+        <label class="companion-form__label" for="vegan">Веган-сыроед</label>
       </div>
       <div class="companion-form__item transport-list">
         <p class="companion-form__heading">Транспорт</p>
-        <button class="companion-form__toggle-button">Закрыть</button>
+        <button class="companion-form__toggle-button" type="button">Закрыть</button>
         <label class="transport-list__item">
+          <span class="visually-hidden">Самолет</span>
           <input class="transport-list__checkbox" type="checkbox" name="plane">
         </label>
         <label class="transport-list__item">
+          <span class="visually-hidden">Автобус</span>
           <input class="transport-list__checkbox" type="checkbox" name="bus">
         </label>
         <label class="transport-list__item">
+          <span class="visually-hidden">Велосипед</span>
           <input class="transport-list__checkbox" type="checkbox" name="bicycle">
         </label>
         <label class="transport-list__item">
+          <span class="visually-hidden">Пешком</span>
           <input class="transport-list__checkbox" type="checkbox" name="walk">
         </label>
       </div>
       <div class="companion-form__item range-filter">
         <p class="companion-form__heading">Левел</p>
-        <button class="companion-form__toggle-button">Закрыть</button>
+        <button class="companion-form__toggle-button" type="button">Закрыть</button>
         <div class="range-filter__container">
-          <div class="range-filter__output">
+          <div class="range-filter__input">
             <label class="range-filter__level range-filter__level--min-level">
-              <output name="min-level">30</output>
+              <input name="min-level" type="number" value="30">
             </label>
             <label class="range-filter__level range-filter__level--max-level">
-              <output name="max-level">100</output>
+              <input name="max-level" type="number" value="100">
             </label>
           </div>
           <div class="range-filter__controls">
@@ -813,7 +793,7 @@
           </div>
         </div>
       </div>
-      <button class="companion-filet__button">Показать</button>
+      <button class="companion-filet__button" type="submit">Показать</button>
     </form>
   </section>
   <section class="companions">
@@ -829,15 +809,12 @@
           <p class="companions__label">Хочет посетить</p>
           <ul class="companions__to-visit-list">
             <li class="companions__to-visit-item">
-              <img src="" alt="" class="companions__to-visit-flag">
               <span class="companions__to-visit-country">Шри-ланка</span>
             </li>
             <li class="companions__to-visit-item">
-              <img src="" alt="" class="companions__to-visit-flag">
               <span class="companions__to-visit-country">Таиланд</span>
             </li>
             <li class="companions__to-visit-item">
-              <img src="" alt="" class="companions__to-visit-flag">
               <span class="companions__to-visit-country">Сейшелы</span>
             </li>
           </ul>
@@ -877,11 +854,9 @@
           <p class="companions__label">Хочет посетить</p>
           <ul class="companions__to-visit-list">
             <li class="companions__to-visit-item">
-              <img src="" alt="" class="companions__to-visit-flag">
               <span class="companions__to-visit-country">Бельгия</span>
             </li>
             <li class="companions__to-visit-item">
-              <img src="" alt="" class="companions__to-visit-flag">
               <span class="companions__to-visit-country">Чехия</span>
             </li>
           </ul>
@@ -922,15 +897,12 @@
           <p class="companions__label">Хочет посетить</p>
           <ul class="companions__to-visit-list">
             <li class="companions__to-visit-item">
-              <img src="" alt="" class="companions__to-visit-flag">
               <span class="companions__to-visit-country">США</span>
             </li>
             <li class="companions__to-visit-item">
-              <img src="" alt="" class="companions__to-visit-flag">
               <span class="companions__to-visit-country">Австралия</span>
             </li>
             <li class="companions__to-visit-item">
-              <img src="" alt="" class="companions__to-visit-flag">
               <span class="companions__to-visit-country">Доминика</span>
             </li>
           </ul>
@@ -970,11 +942,9 @@
           <p class="companions__label"></p>
           <ul class="companions__to-visit-list">
             <li class="companions__to-visit-item">
-              <img src="" alt="" class="companions__to-visit-flag">
               <span class="companions__to-visit-country">Великобритания</span>
             </li>
             <li class="companions__to-visit-item">
-              <img src="" alt="" class="companions__to-visit-flag">
               <span class="companions__to-visit-country">Германия</span>
             </li>
           </ul>
@@ -1006,10 +976,10 @@
     </ul>
     <a href="#" class="companions__more-button">Показать еще</a>
     <div class="companions__nav-buttons"></div>
-    <button class="companions__nav-button companions__nav-button--prev">
+    <button class="companions__nav-button companions__nav-button--prev" type="button">
       <span class="visually-hidden">Предыдущая страница</span>
     </button>
-    <button class="companions__nav-button companions__nav-button--next">
+    <button class="companions__nav-button companions__nav-button--next" type="button">
       <span class="visually-hidden">Следующая страница</span>
     </button>
   </section>
