@@ -1,7 +1,7 @@
 # Личный проект «Погнали» [![Check status][check-image]][check-url]
 
 * Студент: [Георгий Найфонов](https://up.htmlacademy.ru/adaptive/21/user/1035371).
-* Наставник: `Неизвестно`.
+* Наставник: [Артур Трифонов](https://htmlacademy.ru/profile/wrgraff).
 
 ---
 
