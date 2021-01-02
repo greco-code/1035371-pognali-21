@@ -1,0 +1,27 @@
+// Pseudo-elements
+@mixin pseudo {
+  content: "";
+  position: absolute;
+}
+
+
+// List-style
+@mixin list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+
+//Viewport
+@mixin tablet {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (max-width: 1440px) {
+    @content;
+  }
+}
