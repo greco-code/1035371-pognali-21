@@ -1,0 +1,16 @@
+.page {
+  box-sizing: border-box;
+}
+
+.page__body {
+  font-family: $font-stack;
+  line-height: 22px;
+  font-size: 16px;
+  background-color: $color-blue-100;
+  margin: 0;
+  padding: 0;
+}
+
+.page__header {
+  background-color: $color-blue-700;
+}

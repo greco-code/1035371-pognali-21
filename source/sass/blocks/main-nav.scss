@@ -1,0 +1,138 @@
+.main-nav {
+  padding-top: 27px;
+  padding-right: 25px;
+  padding-left: 25px;
+  color: $color-blue-600;
+  background-color: $color-blue-700;
+
+  &--opened,
+  &--nojs {
+    background-color: $color-white;
+  }
+}
+
+.main-nav__toggle {
+  position: absolute;
+  top: 16px;
+  right: 18px;
+  display: flex;
+  width: 18px;
+  height: 18px;
+  padding: 20px;
+  border: none;
+  background-color: $transparent;
+
+  &::after {
+    @include pseudo();
+    top: 0;
+    right: 0;
+    bottom: 5px;
+    left: 0;
+    width: 25px;
+    height: 3px;
+    margin: auto;
+    border-radius: 30px;
+    background-color: $color-white;
+    box-shadow: 0 8px 0 0 $color-white;
+  }
+}
+
+.main-nav--opened .main-nav__toggle {
+  top: 14px;
+
+  &::before,
+  &::after {
+    @include pseudo();
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 25px;
+    height: 2px;
+    margin: auto;
+    background-color: $color-gray-250;
+    box-shadow: none;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+    box-shadow: none;
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
+
+.main-nav--nojs .main-nav__toggle {
+  display: none;
+}
+
+.main-nav--opened .main-nav__logo {
+  margin-bottom: 60px;
+}
+
+.main-nav__logo {
+  display: inline-block;
+  margin-bottom: 69px;
+}
+
+.main-nav--opened .main-nav__logo,
+.main-nav--nojs .main-nav__logo {
+  position: relative;
+
+  &::after {
+    @include pseudo();
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 96px;
+    height: 15px;
+    background-image: url("../img/logo-menu-mobile.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+}
+
+.main-nav__list {
+  margin: 0;
+}
+
+.main-nav--opened .main-nav__list,
+.main-nav--nojs .main-nav__list {
+  @include list();
+
+  &--site-list {
+    margin-bottom: 51px;
+  }
+
+  &--contacts {
+    margin-bottom: 39px;
+  }
+}
+
+.main-nav__authorize {
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 30px;
+  display: block;
+  margin-bottom: 51px;
+  padding-top: 12px;
+  padding-bottom: 8px;
+  text-align: center;
+  text-transform: uppercase;
+  color: $color-blue-700;
+  border-radius: 30px;
+  background-color: $color-yellow-100;
+}
+
+.main-nav__menu-item {
+  display: none;
+}
+
+.main-nav--nojs .main-nav__menu-item,
+.main-nav--opened .main-nav__menu-item {
+  display: block;
+}
+

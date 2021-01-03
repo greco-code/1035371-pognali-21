@@ -8,14 +8,21 @@
 </head>
 <body class="page__body">
 <header class="page__header page__header--index">
-  <nav class="main-nav">
-    <a class="main-nav__logo">
-      <img src="" alt="Погнали" class="main-nav__logo-img">
+  <nav class="main-nav page-header__item">
+    <a class="main-nav__logo main-nav__item">
+      <picture>
+        <source media="(min-width: 1440px)" srcset="img/logo-desktop.webp 1x, img/logo-desktop@2x.webp 2x" type="image/webp">
+        <source media="(min-width: 768px)" srcset="img/logo-tablet.webp 1x, img/logo-tablet@2x.webp 2x" type="image/webp">
+        <source srcset="img/logo-mobile.webp 1x, img/logo-mobile@2x.webp 2x" type="image/webp">
+        <source media="(min-width: 1440px)" src="img/logo-tablet.png" srcset="img/logo-tablet@2x.png">
+        <source media="(min-width: 768px)" src="img/logo-tablet.png" srcset="img/logo-tablet@2x.png">
+        <img src="img/logo-mobile.png" srcset="img/logo-mobile@2x.png" alt="Погнали" class="main-nav__logo-img">
+      </picture>
     </a>
     <button class="main-nav__toggle" type="button">
       <span class="visually-hidden main-nav__toggle-text">Открыть меню</span>
     </button>
-    <ul class="main-nav__list site-list">
+    <ul class="main-nav__list main-nav__list--site-list site-list main-nav__menu-item">
       <li class="site-list__item">
         <a class="site-list__link">О сервисе</a>
       </li>
@@ -26,26 +33,36 @@
         <a class="site-list__link" href="">Попутчики</a>
       </li>
     </ul>
-    <ul class="main-nav__list contacts-list contacts-list--full">
-      <li class="contacts-list__item">
-        <a class="contacts-list__link" href="#">Авторизоваться</a>
-      </li>
-      <li class="contacts-list__item">
+    <a class="main-nav__authorize main-nav__menu-item main-nav__menu-item--authorize" href="#">Авторизация</a>
+    <ul class="main-nav__list main-nav__list--contacts contacts-list contacts-list--full">
+      <li class="contacts-list__item main-nav__menu-item">
         <a class="contacts-list__link contacts-list__link--tel" href="tel:88005558628">8 800 555-86-28</a>
       </li>
-      <li class="contacts-list__item">
+      <li class="contacts-list__item main-nav__menu-item">
         <a class="contacts-list__link contacts-list__link--mail" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
       </li>
     </ul>
     <ul class="social-list social-list--header">
-      <li class="social-list__item">
-        <a class="social-list__link social-list__link--facebook" href="https://www.facebook.com" aria-label="Фейсбук"></a>
+      <li class="social-list__item main-nav__menu-item">
+        <a class="social-list__link social-list__link--facebook" href="https://www.facebook.com" aria-label="Фейсбук">
+          <svg class="social-list__icon" width="11" height="21" viewBox="0 0 14 28">
+            <use xlink:href="img/sprite.svg#facebook"></use>
+          </svg>
+        </a>
       </li>
-      <li class="social-list__item">
-        <a class="social-list__link social-list__link--vk" href="https://www.vk.com" aria-label="Вк"></a>
+      <li class="social-list__item main-nav__menu-item">
+        <a class="social-list__link social-list__link--vk" href="https://www.vk.com" aria-label="Вк">
+          <svg class="social-list__icon" width="23" height="12" viewBox="0 0 31 16">
+            <use xlink:href="img/sprite.svg#vk"></use>
+          </svg>
+        </a>
       </li>
-      <li class="social-list__item">
-        <a class="social-list__link social-list__link--instagram" href="https://www.instagram.com" aria-label="Инстаграм"></a>
+      <li class="social-list__item main-nav__menu-item">
+        <a class="social-list__link social-list__link--instagram" href="https://www.instagram.com" aria-label="Инстаграм">
+          <svg class="social-list__icon" width="18" height="18" viewBox="0 0 24 24">
+            <use xlink:href="img/sprite.svg#instagram"></use>
+          </svg>
+        </a>
       </li>
     </ul>
   </nav>
@@ -117,7 +134,7 @@
       <li class="companions-section__item">
         <img src="" alt="Аватар Тани Фирсовой" class="companions-section__photo">
         <div class="level">
-          <svg class="level__circle"></svg>
+<!--          <svg class="level__circle"></svg>-->
           <span class="level__value">99</span>
           <span class="level__text">Level</span>
         </div>
@@ -125,23 +142,23 @@
         <p class="companions-section__hashtags">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
         <ul class="transport-list companions-section__transport">
           <li class="transport-list__item">
-            <svg class="transport-list__icon"></svg>
+            <svg class="transport-list__icon" width="21" height="21"></svg>
           </li>
           <li class="transport-list__item">
-            <svg class="transport-list__icon"></svg>
+            <svg class="transport-list__icon" width="17" height="19"></svg>
           </li>
           <li class="transport-list__item">
-            <svg class="transport-list__icon"></svg>
+            <svg class="transport-list__icon" width="24" height="24"></svg>
           </li>
           <li class="transport-list__item">
-            <svg class="transport-list__icon"></svg>
+            <svg class="transport-list__icon" width="21" height="23"></svg>
           </li>
         </ul>
       </li>
       <li class="companions-section__item">
         <img src="" alt="Аватар Пети Демина" class="companions-section__photo">
         <div class="level">
-          <svg class="level__circle"></svg>
+<!--          <svg class="level__circle"></svg>-->
           <span class="level__value">80</span>
           <span class="level__text">Level</span>
         </div>
@@ -149,16 +166,16 @@
         <p class="companions-section__hashtags">#бургер #бар #футбол #концерт #крафт</p>
         <ul class="transport-list companions-section__transport">
           <li class="transport-list__item">
-            <svg class="transport-list__icon"></svg>
+            <svg class="transport-list__icon" width="21" height="21"></svg>
           </li>
           <li class="transport-list__item">
-            <svg class="transport-list__icon"></svg>
+            <svg class="transport-list__icon" width="17" height="19"></svg>
           </li>
           <li class="transport-list__item">
-            <svg class="transport-list__icon"></svg>
+            <svg class="transport-list__icon" width="24" height="24"></svg>
           </li>
           <li class="transport-list__item">
-            <svg class="transport-list__icon"></svg>
+            <svg class="transport-list__icon" width="21" height="23"></svg>
           </li>
         </ul>
       </li>

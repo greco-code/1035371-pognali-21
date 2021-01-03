@@ -1,0 +1,12 @@
+.site-list {
+  text-align: center;
+}
+
+.site-list__link {
+  font-size: 30px;
+  display: block;
+  line-height: 35px;
+  font-weight: 700;
+  color: $color-blue-600;
+  text-transform: uppercase;
+}

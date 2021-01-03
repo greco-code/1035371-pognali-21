@@ -1,0 +1,19 @@
+.social-list {
+  @include list();
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-left: auto;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-nav--opened .social-list--header,
+.main-nav--nojs .social-list--header{
+  padding-bottom: 34px;
+}
+
+.social-list__link {
+  padding: 13px;
+}
+
