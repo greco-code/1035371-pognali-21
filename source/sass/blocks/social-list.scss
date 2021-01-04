@@ -11,6 +11,12 @@
     margin-right: auto;
     padding-left: 70px;
   }
+
+  &--header {
+    @include desktop() {
+      display: none;
+    }
+  }
 }
 
 
@@ -23,6 +29,20 @@
 .social-list__link {
   display: block;
   padding: 13px;
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  @include desktop() {
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
 }
 
 .social-list__icon {

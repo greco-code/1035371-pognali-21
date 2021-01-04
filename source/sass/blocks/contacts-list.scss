@@ -1,5 +1,14 @@
 .contacts-list {
   grid-column: 1/-1;
+
+  @include desktop() {
+    grid-column: 3/4;
+    grid-row: 1/2;
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    padding-left: 0;
+  }
 }
 
 .contacts-list__link {
@@ -13,6 +22,10 @@
   padding-left: 61px;
   text-transform: uppercase;
   color: $color-blue-600;
+
+  &:active {
+    opacity: 0.3;
+  }
 
   &::before {
     @include pseudo();
@@ -30,15 +43,37 @@
       width: 68px;
       height: 68px;
     }
+
+    @include desktop() {
+      width: 50px;
+      height: 50px;
+    }
   }
 
   @include tablet() {
-    padding-left: 91px;
     padding-top: 24px;
     padding-bottom: 16px;
+    padding-left: 91px;
   }
 
+  @include desktop() {
+    &:hover {
+      opacity: 0.7;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+
+
   &--tel {
+    &::before {
+      @include desktop() {
+        background-color: $color-yellow-400;
+      }
+    }
+
     &::after {
       @include pseudo();
       top: 0;
@@ -52,15 +87,28 @@
       background-repeat: no-repeat;
 
       @include tablet() {
-        width: 28px;
         left: 20px;
+        width: 28px;
         height: 26px;
         background-size: 100%;
+      }
+
+      @include desktop() {
+        left: 16px;
+        width: 18px;
+        height: 18px;
+        background-image: url("../img/call.svg");
       }
     }
   }
 
   &--mail {
+    &::before {
+      @include desktop() {
+        background-color: $color-yellow-200;
+      }
+    }
+
     &::after {
       @include pseudo();
       top: 0;
@@ -74,10 +122,16 @@
       background-repeat: no-repeat;
 
       @include tablet() {
+        left: 17px;
         width: 36px;
         height: 38px;
-        left: 17px;
         background-size: 100%;
+      }
+
+      @include desktop() {
+        width: 16px;
+        height: 14px;
+        background-image: url("../img/mail2.svg");
       }
     }
   }
@@ -86,4 +140,20 @@
     font-size: 28px;
     line-height: 28px;
   }
+
+  @include desktop() {
+    padding: 0;
+    width: 50px;
+    height: 50px;
+  }
+}
+
+.contacts-list__content {
+  @include desktop() {
+    display: none;
+  }
+}
+
+.contacts-list__link:active {
+  opacity: 0.3;
 }
