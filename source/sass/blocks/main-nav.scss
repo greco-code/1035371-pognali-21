@@ -1,23 +1,29 @@
 .main-nav {
-  padding-top: 27px;
-  padding-right: 25px;
-  padding-left: 25px;
+  display: grid;
+  padding: 17px 25px 60px;
   color: $color-blue-600;
   background-color: $color-blue-700;
+  grid-template-columns: 1fr 1fr;
 
   &--opened,
   &--nojs {
     background-color: $color-white;
+    padding-bottom: 22px;
+  }
+
+  @include tablet() {
+    padding: 40px 40px 72px;
+    grid-template-columns: 2fr 1fr 2fr;
   }
 }
 
+
 .main-nav__toggle {
-  position: absolute;
-  top: 16px;
-  right: 18px;
+  position: relative;
   display: flex;
   width: 18px;
   height: 18px;
+  margin-left: auto;
   padding: 20px;
   border: none;
   background-color: $transparent;
@@ -26,7 +32,7 @@
     @include pseudo();
     top: 0;
     right: 0;
-    bottom: 5px;
+    bottom: 13px;
     left: 0;
     width: 25px;
     height: 3px;
@@ -35,10 +41,14 @@
     background-color: $color-white;
     box-shadow: 0 8px 0 0 $color-white;
   }
+
+  @include tablet() {
+    margin: auto;
+  }
 }
 
 .main-nav--opened .main-nav__toggle {
-  top: 14px;
+  margin: -2px -7px 63px auto;
 
   &::before,
   &::after {
@@ -62,24 +72,28 @@
   &::after {
     transform: rotate(-45deg);
   }
+
+  @include tablet() {
+    margin: 6px auto 63px;
+  }
 }
 
 .main-nav--nojs .main-nav__toggle {
   display: none;
-}
-
-.main-nav--opened .main-nav__logo {
-  margin-bottom: 60px;
+  margin: -2px -7px 63px auto;
 }
 
 .main-nav__logo {
-  display: inline-block;
-  margin-bottom: 69px;
+  display: block;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 .main-nav--opened .main-nav__logo,
 .main-nav--nojs .main-nav__logo {
   position: relative;
+  margin-bottom: 68px;
+  margin-top: 0;
 
   &::after {
     @include pseudo();
@@ -87,12 +101,33 @@
     right: 0;
     bottom: 0;
     left: 0;
-    width: 96px;
+    width: 100px;
     height: 15px;
+    margin-top: auto;
+    margin-bottom: auto;
+    // Todo добавить ретину
     background-image: url("../img/logo-menu-mobile.png");
     background-repeat: no-repeat;
     background-size: 100%;
+
+    @include tablet() {
+      // todo добавить ретину
+      width: 164px;
+      height: 42px;
+      margin-top: 0;
+      background-image: url("../img/logo-menu-tablet.png");
+    }
   }
+
+  @include tablet() {
+    margin-top: 5px;
+    margin-bottom: 140px;
+  }
+}
+
+.main-nav--opened .main-nav__logo-img,
+.main-nav--nojs .main-nav__logo-img {
+  display: none;
 }
 
 .main-nav__list {
@@ -105,10 +140,22 @@
 
   &--site-list {
     margin-bottom: 51px;
+
+    @include tablet() {
+      margin-bottom: 128px;
+    }
   }
 
   &--contacts {
-    margin-bottom: 39px;
+    margin-bottom: 25px;
+
+    @include tablet() {
+      margin-bottom: 116px;
+    }
+  }
+
+  @include tablet() {
+    padding-left: 57px;
   }
 }
 
@@ -125,10 +172,35 @@
   color: $color-blue-700;
   border-radius: 30px;
   background-color: $color-yellow-100;
+  grid-column: 1/-1;
+
+  @include tablet() {
+    font-size: 20px;
+    line-height: 20px;
+    margin-bottom: auto;
+    margin-left: auto;
+    padding: 17px 31px 13px;
+    grid-column: 3/4;
+    grid-row: 1/2;
+  }
+}
+
+.main-nav--opened .main-nav__authorize,
+.main-nav--nojs .main-nav__authorize {
+  @include tablet() {
+    font-weight: 400;
+    letter-spacing: 0.03em;
+  }
 }
 
 .main-nav__menu-item {
   display: none;
+
+  @include tablet() {
+    &--authorize {
+      display: inline;
+    }
+  }
 }
 
 .main-nav--nojs .main-nav__menu-item,

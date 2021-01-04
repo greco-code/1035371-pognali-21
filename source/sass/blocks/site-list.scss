@@ -1,5 +1,10 @@
 .site-list {
   text-align: center;
+  grid-column: 1/-1;
+
+  @include tablet() {
+    text-align: left;
+  }
 }
 
 .site-list__link {
@@ -9,4 +14,10 @@
   font-weight: 700;
   color: $color-blue-600;
   text-transform: uppercase;
+
+  @include tablet() {
+    font-size: 60px;
+    line-height: 71px;
+    font-weight: 500;
+  }
 }

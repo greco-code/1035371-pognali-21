@@ -1,3 +1,7 @@
+.contacts-list {
+  grid-column: 1/-1;
+}
+
 .contacts-list__link {
   font-size: 16px;
   font-weight: 700;
@@ -21,6 +25,17 @@
     margin-bottom: auto;
     border-radius: 50%;
     background-color: $color-blue-700;
+
+    @include tablet() {
+      width: 68px;
+      height: 68px;
+    }
+  }
+
+  @include tablet() {
+    padding-left: 91px;
+    padding-top: 24px;
+    padding-bottom: 16px;
   }
 
   &--tel {
@@ -35,6 +50,13 @@
       margin-bottom: auto;
       background-image: url("../img/telephone.svg");
       background-repeat: no-repeat;
+
+      @include tablet() {
+        width: 28px;
+        left: 20px;
+        height: 26px;
+        background-size: 100%;
+      }
     }
   }
 
@@ -50,6 +72,18 @@
       margin-bottom: auto;
       background-image: url("../img/mail.svg");
       background-repeat: no-repeat;
+
+      @include tablet() {
+        width: 36px;
+        height: 38px;
+        left: 17px;
+        background-size: 100%;
+      }
     }
+  }
+
+  @include tablet() {
+    font-size: 28px;
+    line-height: 28px;
   }
 }
