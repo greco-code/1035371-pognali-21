@@ -150,12 +150,14 @@
   @include tablet() {
     padding: 40px 40px 72px;
     grid-template-columns: 2fr 1fr 2fr;
+    background-color: $color-blue-600;
   }
 
   @include desktop() {
     align-items: center;
     padding: 46px 60px 12px;
     grid-template-columns: max-content 1fr max-content min-content;
+    background-color: $color-blue-700;
   }
 }
 
