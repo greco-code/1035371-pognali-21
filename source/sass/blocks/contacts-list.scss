@@ -1,4 +1,5 @@
 .contacts-list {
+  @include list();
   grid-column: 1/-1;
 
   @include desktop() {
@@ -154,6 +155,7 @@
   }
 }
 
-.contacts-list__link:active {
-  opacity: 0.3;
+.contacts-list--hero .contacts-list__content {
+  display: none;
 }
+

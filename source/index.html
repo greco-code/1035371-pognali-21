@@ -8,7 +8,7 @@
 </head>
 <body class="page__body">
 <header class="page__header page__header--index">
-  <nav class="main-nav main-nav--opened page-header__item">
+  <nav class="main-nav page-header__item">
     <a class="main-nav__logo main-nav__item">
       <picture>
         <source media="(min-width: 1440px)" srcset="img/logo-desktop.webp 1x, img/logo-desktop@2x.webp 2x" type="image/webp">
@@ -34,7 +34,7 @@
       </li>
     </ul>
     <a class="main-nav__authorize main-nav__menu-item main-nav__menu-item--authorize" href="#">Авторизация</a>
-    <ul class="main-nav__list main-nav__list--contacts contacts-list contacts-list--full">
+    <ul class="main-nav__list main-nav__list--contacts contacts-list">
       <li class="contacts-list__item main-nav__menu-item">
         <a class="contacts-list__link contacts-list__link--tel" href="tel:88005558628" aria-label="8 800 555-86-28">
           <span class="contacts-list__content">8 800 555-86-28</span>
@@ -74,28 +74,38 @@
 <main class="page-main">
   <h1 class="visually-hidden">Приложение "погнали"</h1>
   <section class="page-hero section">
-    <p class="page-hero__slogan">В путешествие с крутыми попутчиками!</p>
-    <blockquote class="page-hero__review">
-      <p class="page-hero__review-text">«Лучшее приложение, что я видел в жизни!»</p>
-      <p class="page-hero__review-author">Мурат Эльтазин главный редактор газеты «гаджетлайф»</p>
-    </blockquote>
-    <ol class="page-hero__path">
-      <li class="page-hero__path-item">Выберите направление</li>
-      <li class="page-hero__path-item">Изучите идеи путешественников</li>
-      <li class="page-hero__path-item">Находите тех, кто похож на вас</li>
-      <li class="page-hero__path-item">Путешествуйте вместе!</li>
-    </ol>
-    <ul class="contacts-list contacts-list--short">
-      <li class="contacts-list__item">
-        <a class="contacts-list__link contacts-list__link--tel" href="tel:88005558628">8 800 555-86-28</a>
-      </li>
-      <li class="contacts-list__item">
-        <a class="contacts-list__link contacts-list__link--mail" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
-      </li>
-      <li class="contacts-list__item">
-        <a class="contacts-list__link" href="#">Авторизоваться</a>
-      </li>
-    </ul>
+    <div class="page-hero__wrapper page-hero__wrapper--slogan">
+      <p class="page-hero__slogan">В путешествие с&nbsp;крутыми попутчиками!</p>
+    </div>
+    <div class="page-hero__wrapper page-hero__wrapper--content">
+      <ul class="contact-us page-hero__contact-us">
+        <li class="contact-us__item">
+          <a class="contact-us__link contact-us__link--tel" href="tel:88005558628">
+            <span class="visually-hidden">8 800 555-86-28</span>
+          </a>
+        </li>
+        <li class="contact-us__item">
+          <a class="contact-us__link contact-us__link--mail" href="mailto:mail@htmlacademy.ru">
+            <span class="visually-hidden">mail@htmlacademy.ru</span>
+          </a>
+        </li>
+        <li class="contact-us__item--auth">
+          <a class="contact-us__link contact-us__link--auth" href="#">Авторизация</a>
+        </li>
+      </ul>
+      <blockquote class="page-hero__review">
+        <p class="page-hero__review-text">«Лучшее приложение, что я видел в жизни!»</p>
+        <p class="page-hero__review-author">Мурат Эльтазин главный редактор газеты «гаджетлайф»</p>
+      </blockquote>
+    </div>
+    <div class="page-hero__wrapper page-hero__wrapper--path">
+      <ol class="page-hero__path">
+        <li class="page-hero__path-item">Выберите направление</li>
+        <li class="page-hero__path-item">Изучите идеи путешественников</li>
+        <li class="page-hero__path-item">Находите тех, кто похож на вас</li>
+        <li class="page-hero__path-item">Путешествуйте вместе!</li>
+      </ol>
+    </div>
   </section>
   <section class="about-section section">
     <h2 class="about-section__heading section__heading">О сервисе</h2>
