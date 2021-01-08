@@ -4,6 +4,34 @@
   @include tablet() {
     background-color: $color-blue-600;
   }
+
+  @include desktop {
+    display: grid;
+    padding: 91px 60px 121px;
+    background-color: $color-blue-700;
+    grid-template-columns: repeat(4, 1fr);
+    background-image: url("../img/hero-desktop.png");
+    background-position-y: -118px;
+    position: relative;
+    background-repeat: no-repeat;
+
+    &::after {
+      @include pseudo();
+      background-image: url("../img/traveller-desktop.png");
+      right: 405px;
+      bottom: -1px;
+      width: 431px;
+      height: 640px;
+    }
+
+    @mixin retina {
+      background-image: url("../img/hero-desktop@2x.png");
+
+      &::after {
+        background-image: url("../img/traveller-desktop@2x.png");
+      }
+    }
+  }
 }
 
 .page-hero__wrapper {
@@ -16,6 +44,10 @@
   @include tablet() {
     padding-right: 40px;
     padding-left: 40px;
+  }
+
+  @include desktop() {
+    padding: 0;
   }
 
   &--slogan {
@@ -38,14 +70,27 @@
       background-image: url("../img/traveller-mobile.png");
     }
 
+    @include retina {
+      background-image: url("../img/hero-mobile@2x.png");
+
+      &::after {
+        background-image: url("../img/traveller-mobile@2x.png");
+      }
+    }
+
     @include tablet() {
-      padding-bottom: 0;
       margin-bottom: 31px;
+      padding-bottom: 0;
       background-image: none;
+      grid-column: 1/3;
 
       &::after {
         display: none;
       }
+    }
+
+    @include desktop() {
+      padding-left: 67px;
     }
   }
 
@@ -54,20 +99,39 @@
     margin-bottom: 29px;
 
     @include tablet() {
+      position: relative;
+      margin-bottom: 0;
       padding-top: 76px;
       padding-bottom: 330px;
-      margin-bottom: 0;
-      //todo add retina
       background-image: url("../img/hero-tablet.png");
       background-position: -356px -2px;
 
       &::after {
         @include pseudo();
-        background-image: url("../img/traveller-tablet.png");
+        right: 111px;
+        bottom: 140px;
         width: 372px;
         height: 451px;
-        right: 111px;
-        bottom: -3px;
+        background-image: url("../img/traveller-tablet.png");
+      }
+
+      @include retina {
+        background-image: url("../img-hero-tablet@2x.png");
+
+        &::after {
+          background-image: url("../img/traveller-tablet@2x.png");
+        }
+      }
+    }
+
+    @include desktop() {
+      margin-top: 0;
+      padding: 11px 26px 94px 45px;
+      background-image: none;
+      grid-column: 4/5;
+
+      &::after {
+        display: none;
       }
     }
   }
@@ -77,8 +141,15 @@
     background-image: linear-gradient(180deg, $color-blue-700 22%, $color-blue-600 23%);
 
     @include tablet() {
-      background-image: none;
       margin-top: -140px;
+      background-image: none;
+    }
+
+    @include desktop() {
+      margin-top: 0;
+      padding-bottom: 0;
+      grid-column: 1/-1;
+      z-index: 1;
     }
   }
 }
@@ -98,6 +169,11 @@
     padding-right: 144px;
     padding-left: 144px;
   }
+
+  @include desktop() {
+    padding: 0;
+    text-align: left;
+  }
 }
 
 .page-hero__review {
@@ -111,6 +187,10 @@
     margin-bottom: 0;
     padding-right: 390px;
     padding-left: 33px;
+  }
+
+  @include desktop() {
+    padding: 0;
   }
 }
 
@@ -162,6 +242,10 @@
     line-height: 24px;
     display: grid;
     grid-template-columns: 50% 50%;
+  }
+
+  @include desktop() {
+    grid-template-columns: repeat(4, 25%);
   }
 }
 
@@ -263,6 +347,48 @@
       right: auto;
       bottom: 21px;
       left: 33px;
+    }
+  }
+
+  @include desktop() {
+    margin-right: 0;
+    border-radius: 20px 0 0 20px;
+
+    &:nth-child(odd) {
+      z-index: 0;
+      min-height: 107px;
+      margin-right: 0;
+      margin-left: -15px;
+      padding-top: 30px;
+      padding-right: 100px;
+      padding-bottom: 30px;
+    }
+
+    &:nth-child(even) {
+      z-index: 0;
+      min-height: 107px;
+      margin-right: 0;
+      margin-left: -15px;
+      padding-top: 30px;
+      padding-right: 100px;
+      padding-bottom: 30px;
+    }
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:nth-last-child(2) {
+      border-radius: 20px 0 0 20px;
+    }
+
+    &:last-child {
+      margin-right: 0;
+      border-radius: 20px;
+    }
+
+    &::after {
+      display: none;
     }
   }
 }
