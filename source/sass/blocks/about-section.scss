@@ -1,0 +1,144 @@
+.about-section {
+  position: relative;
+  border-bottom-right-radius: 30px;
+  border-bottom-left-radius: 30px;
+  background-color: $color-blue-600;
+  background-image: url("../img/about-mobile.png");
+  background-size: 100%;
+
+  @include retina() {
+    background-image: url("../img/about-mobile@2x.png");
+  }
+
+  @include tablet() {
+    border-bottom-right-radius: 60px;
+    border-bottom-left-radius: 60px;
+    background-color: $color-blue-600;
+    background-image: none;
+  }
+}
+
+.about-section__wrapper {
+  margin-right: auto;
+  margin-left: auto;
+  padding: 34px 49px 66px;
+  position: relative;
+
+  @include tablet() {
+    margin-right: 50%;
+    padding: 98px 0 89px 74px;
+
+    &::after {
+      @include pseudo();
+      right: -98%;
+      bottom: 88px;
+      width: 376px;
+      height: 548px;
+      background-image: url("../img/about-tablet.png");
+      background-size: 100%;
+
+      @media (min-width: 1368px) {
+        bottom: 40px;
+      }
+
+      @include retina() {
+        background-image: url("../img/about-tablet@2x.png");
+      }
+    }
+
+    &::before {
+      @include pseudo();
+      top: 57px;
+      right: 40px;
+      left: 40px;
+      //todo починить z-index
+      z-index: -1;
+      height: 212px;
+      margin-right: auto;
+      margin-left: auto;
+      border-radius: 20px;
+      background-color: $color-blue-700;
+    }
+  }
+
+  @include desktop() {
+    max-width: 1440px;
+    margin-right: auto;
+    padding: 133px 690px 190px 130px;
+
+    &::after {
+      position: absolute;
+      width: 630px;
+      height: 665px;
+      left: 750px;
+      bottom: 1px;
+      right: auto;
+      background-image: url("../img/about-desktop.png");
+
+      @include retina() {
+        background-image: url("../img/about-desktop@2x.png");
+      }
+    }
+
+    &::before {
+      //todo починить z-index
+      top: 0;
+      left: 60px;
+      width: 212px;
+      height: 212px;
+      margin: 0;
+    }
+  }
+}
+
+.about-section__heading {
+  @include tablet() {
+    z-index: 1;
+    margin-bottom: 41px;
+  }
+
+  @include desktop() {
+    margin-bottom: 57px;
+  }
+}
+
+.about-section__text {
+  margin-bottom: 18px;
+
+  @include tablet() {
+    z-index: 1;
+    margin-bottom: 30px;
+  }
+
+  @include desktop() {
+    line-height: 34px;
+    margin-bottom: 38px;
+  }
+}
+
+.about-section__slogan {
+  @include tablet() {
+    z-index: 1;
+  }
+
+  @include desktop() {
+    line-height: 24px;
+    margin-bottom: 114px;
+    padding-right: 150px;
+  }
+}
+
+.about-section__button {
+  display: none;
+
+  @include tablet() {
+    display: flex;
+    margin-right: 11%;
+  }
+
+  @include desktop() {
+    display: inline;
+    margin-right: auto;
+    padding-right: 127px;
+  }
+}
