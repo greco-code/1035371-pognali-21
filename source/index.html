@@ -121,28 +121,47 @@
     </div>
   </section>
   <section class="direction-section section">
-    <h2 class="direction-section__heading">Направления</h2>
-    <ul class="direction-section__list">
-      <li class="direction-section__item">
-        <img src="" alt="Фото песчаного пляжа в Тайланде" class="direction-section__photo">
-        <p class="direction-section__heading">Таиланд</p>
-        <p class="direction-section__slogan">Джунгли зовут!</p>
-        <span class="direction-section__count">18321</span>
-      </li>
-      <li class="direction-section__item">
-        <img src="" alt="Фото песчаного пляжа в Тайланде" class="direction-section__photo">
-        <p class="direction-section__heading">Франция</p>
-        <p class="direction-section__slogan">Трэ бьен, манифик!</p>
-        <span class="direction-section__count">12518</span>
-      </li>
-      <li class="direction-section__item">
-        <img src="" alt="Фото песчаного пляжа в Тайланде" class="direction-section__photo">
-        <p class="direction-section__heading">Чехия</p>
-        <p class="direction-section__slogan">Закоулки старой Европы</p>
-        <span class="direction-section__count">5326</span>
-      </li>
-    </ul>
-    <a href="#" class="direction-section__button button">Показать все</a>
+    <div class="direction-section__wrapper">
+      <h2 class="direction-section__heading section__heading">Направления</h2>
+      <p class="direction-section__text section__text">Мы не продаем туры и ничего не рекламируем. Люди сами пишут о странах, куда хотели бы отправиться и чем можно там
+        заняться.</p>
+      <ul class="direction-section__list">
+        <li class="direction-section__item">
+          <picture>
+            <source media="(min-width: 768px)" srcset="img/thailand-desktop.webp 1x, img/thailand-desktop@2x.webp 2x" type="image/webp">
+            <source srcset="img/thailand-mobile.webp, img/thailand-mobile@2x.webp 2x" type="image/webp">
+            <source media="(min-width: 768px)" src="img/thailand-desktop.jpg" srcset="img/thailand-desktop@2x.jpg 2x">
+            <img src="img/thailand-mobile.jpg" srcset="img/thailand-mobile@2x.jpg 2x" alt="Фото песчаного пляжа в Тайланде" class="direction-section__photo">
+          </picture>
+          <p class="direction-section__heading">Таиланд</p>
+          <p class="direction-section__slogan">Джунгли зовут!</p>
+          <span class="direction-section__count">18321</span>
+        </li>
+        <li class="direction-section__item">
+          <picture>
+            <source media="(min-width: 768px)" srcset="img/france-desktop.webp 1x, img/france-desktop@2x.webp 2x" type="image/webp">
+            <source srcset="img/france-mobile.webp, img/france-mobile@2x.webp 2x" type="image/webp">
+            <source media="(min-width: 768px)" src="img/france-desktop.jpg" srcset="img/france-desktop@2x.jpg 2x">
+            <img src="img/france-mobile.jpg" srcset="img/france-mobile@2x.jpg 2x" alt="Улица во Франции" class="direction-section__photo">
+          </picture>
+          <p class="direction-section__heading">Франция</p>
+          <p class="direction-section__slogan">Трэ бьен, манифик!</p>
+          <span class="direction-section__count">12518</span>
+        </li>
+        <li class="direction-section__item">
+          <picture>
+            <source media="(min-width: 768px)" srcset="img/czech-desktop.webp 1x, img/czech-desktop@2x.webp 2x" type="image/webp">
+            <source srcset="img/czech-mobile.webp, img/czech-mobile@2x.webp 2x" type="image/webp">
+            <source media="(min-width: 768px)" src="img/czech-desktop.jpg" srcset="img/czech-desktop@2x.jpg 2x">
+            <img src="img/czech-mobile.jpg" srcset="img/czech-mobile@2x.jpg 2x" alt="Река в Чехии" class="direction-section__photo">
+          </picture>
+          <p class="direction-section__heading">Чехия</p>
+          <p class="direction-section__slogan">Закоулки старой Европы</p>
+          <span class="direction-section__count">5326</span>
+        </li>
+      </ul>
+      <a href="#" class="direction-section__button button">Показать все</a>
+    </div>
   </section>
   <section class="companions-section section">
     <h2 class="companions-section__heading">Попутчики</h2>
