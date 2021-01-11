@@ -7,11 +7,20 @@
   padding-top: 70px;
   padding-right: 25px;
   padding-left: 25px;
+
+  @include tablet() {
+    padding-top: 73px;
+  }
 }
 
 .direction-section__heading {
   margin-bottom: 19px;
   padding-left: 25px;
+
+  @include tablet() {
+    margin-bottom: 58px;
+    padding-left: 48px;
+  }
 }
 
 .direction-section__text {
@@ -19,15 +28,42 @@
   padding-right: 45px;
   padding-left: 25px;
   color: $color-gray-400;
+
+  @include tablet() {
+    width: 56%;
+    padding-right: 0;
+    padding-left: 50px;
+  }
 }
 
 .direction-section__list {
   @include list();
   margin-bottom: 26px;
+
+  @include tablet() {
+    padding-right: 50px;
+    padding-left: 50px;
+  }
 }
 
 .direction-section__item {
   margin-bottom: 11px;
+  position: relative;
+
+  @include tablet() {
+    display: grid;
+    grid-template-columns: 1fr max-content;
+  }
+}
+
+.direction-section__photo-container {
+  display: block;
+  order: 2;
+
+  @include tablet() {
+    width: 100%;
+    height: 100%;
+  }
 }
 
 .direction-section__photo {
@@ -36,6 +72,14 @@
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   object-fit: cover;
+
+  @include tablet() {
+    width: 186px;
+    height: 100%;
+    min-height: 140px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
 }
 
 .direction-section__container {
@@ -51,6 +95,21 @@
 
   &--czech {
     padding-bottom: 4px;
+
+    @media (min-width: 332px) {
+      padding-bottom: 22px;
+    }
+  }
+
+  @include tablet() {
+    width: 100%;
+    margin-top: 0;
+    padding-top: 30px;
+    padding-bottom: 24px;
+    padding-left: 30px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    grid-template-columns: 1fr;
   }
 }
 
@@ -58,52 +117,25 @@
   font-size: 21px;
   font-weight: 700;
   line-height: 21px;
-  position: relative;
   margin-top: 0;
   margin-bottom: 2px;
 
-  &::before {
-    @include pseudo();
-    top: -39px;
-    left: 1px;
-    width: 35px;
-    height: 24px;
-    border-radius: 3px;
-
-    @include retina() {
-      background-size: 100%;
-    }
+  @include tablet() {
+    font-size: 24px;
+    line-height: 24px;
   }
+}
 
-  &--thailand {
-    &::before {
-      background-image: url("../img/thailand-flag-mobile.png");
+.direction-section__flag-container {
+  position: absolute;
+  display: flex;
+  left: 25px;
+  bottom: 78px;
+}
 
-      @include retina() {
-        background-image: url("../img/thailand-flag-mobile@2x.png");
-      }
-    }
-  }
-
-  &--france {
-    &::before {
-      background-image: url("../img/france-flag-mobile.png");
-
-      @include retina() {
-        background-image: url("../img/france-flag-mobile@2x.png");
-      }
-    }
-  }
-
-  &--czech {
-    &::before {
-      background-image: url("..img/czech-flag-mobile.png");
-
-      @include retina() {
-        background-image: url("../img/czech-flag-mobile@2x.png");
-      }
-    }
-  }
+.direction-section__flag {
+  position: relative;
+  z-index: 2;
 }
 
 .direction-section__slogan {
@@ -114,6 +146,11 @@
   margin-bottom: 0;
   color: $color-gray-200;
   grid-row: 2/3;
+
+  @include tablet() {
+    font-size: 20px;
+    line-height: 20px;
+  }
 }
 
 .direction-section__count {
@@ -136,6 +173,15 @@
     margin-top: auto;
     margin-bottom: auto;
     background-image: url("../img/user.svg");
+  }
+
+  @include tablet() {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  @include tablet() {
+    grid-column: auto;
   }
 }
 
