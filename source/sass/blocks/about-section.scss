@@ -51,8 +51,8 @@
       top: 57px;
       right: 40px;
       left: 40px;
-      //todo починить z-index
-      z-index: -1;
+      // Это вообще бред, но я хз как его тянуть еще
+      width: 179%;
       height: 212px;
       margin-right: auto;
       margin-left: auto;
@@ -81,7 +81,6 @@
     }
 
     &::before {
-      //todo починить z-index
       top: 0;
       left: 60px;
       width: 212px;
@@ -92,6 +91,7 @@
 }
 
 .about-section__heading {
+  position: relative;
   @include tablet() {
     z-index: 1;
     margin-bottom: 41px;
@@ -103,6 +103,7 @@
 }
 
 .about-section__text {
+  position: relative;
   margin-bottom: 18px;
 
   @include tablet() {

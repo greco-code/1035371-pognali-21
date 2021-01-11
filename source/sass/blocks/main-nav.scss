@@ -51,17 +51,23 @@
       height: 15px;
       margin-top: auto;
       margin-bottom: auto;
-      // Todo добавить ретину
       background-image: url("../img/logo-menu-mobile.png");
       background-repeat: no-repeat;
       background-size: 100%;
 
+      @include retina() {
+        background-image: url("../img/logo-menu-mobil@2x.png");
+      }
+
       @include tablet() {
-        // todo добавить ретину
         width: 164px;
         height: 42px;
         margin-top: 0;
         background-image: url("../img/logo-menu-tablet.png");
+
+        @include retina() {
+          background-image: url("../img-logo-menu-tablet@2x.png");
+        }
       }
     }
 
