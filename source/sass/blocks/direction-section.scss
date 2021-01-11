@@ -7,9 +7,35 @@
   padding-top: 70px;
   padding-right: 25px;
   padding-left: 25px;
+  position: relative;
 
   @include tablet() {
     padding-top: 73px;
+
+    &::after {
+      @include pseudo();
+      background-image: url("../img/flags-back.png");
+      right: 40px;
+      top: 80px;
+      height: 574px;
+      width: 288px;
+      z-index: 0;
+
+      @include retina() {
+        background-image: url("../img/flags-back@2x.png");
+        background-size: 100%;
+      }
+    }
+
+    &::before {
+      @include pseudo();
+      left: 40px;
+      top: 406px;
+      width: 141px;
+      height: 141px;
+      border-radius: 20px;
+      background-color: $color-blue-300;
+    }
   }
 }
 
@@ -33,16 +59,19 @@
     width: 56%;
     padding-right: 0;
     padding-left: 50px;
+    margin-bottom: 103px;
   }
 }
 
 .direction-section__list {
   @include list();
   margin-bottom: 26px;
+  position: relative;
 
   @include tablet() {
     padding-right: 50px;
     padding-left: 50px;
+    margin-bottom: 46px;
   }
 }
 
@@ -53,6 +82,10 @@
   @include tablet() {
     display: grid;
     grid-template-columns: 1fr max-content;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
   }
 }
 
@@ -67,6 +100,8 @@
 }
 
 .direction-section__photo {
+  position: relative;
+  z-index: 2;
   display: block;
   width: 100%;
   border-top-left-radius: 10px;
@@ -77,8 +112,7 @@
     width: 186px;
     height: 100%;
     min-height: 140px;
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
+    border-radius: 0 20px 20px 0;
   }
 }
 
@@ -105,10 +139,9 @@
     width: 100%;
     margin-top: 0;
     padding-top: 30px;
-    padding-bottom: 24px;
+    padding-bottom: 21px;
     padding-left: 30px;
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
+    border-radius: 20px 0 0 20px;
     grid-template-columns: 1fr;
   }
 }
@@ -123,6 +156,7 @@
   @include tablet() {
     font-size: 24px;
     line-height: 24px;
+    margin-bottom: 5px;
   }
 }
 
@@ -131,11 +165,23 @@
   display: flex;
   left: 25px;
   bottom: 78px;
+
+  @include tablet() {
+    top: 18px;
+    right: 150px;
+    left: auto;
+    bottom: auto;
+  }
 }
 
 .direction-section__flag {
   position: relative;
   z-index: 2;
+
+  @include tablet() {
+    width: 70px;
+    height: 47px;
+  }
 }
 
 .direction-section__slogan {
@@ -150,6 +196,7 @@
   @include tablet() {
     font-size: 20px;
     line-height: 20px;
+    margin-bottom: 20px;
   }
 }
 
@@ -178,15 +225,30 @@
   @include tablet() {
     font-size: 20px;
     line-height: 20px;
-  }
-
-  @include tablet() {
     grid-column: auto;
+    padding-left: 29px;
+    margin-top: 0;
+
+    &::before {
+      width: 24px;
+      height: 24px;
+      background-size: 100%;
+      left: -3px;
+    }
   }
 }
 
 .direction-section__button {
   &::after {
     right: 20px;
+  }
+
+  @include tablet() {
+    margin-left: 50px;
+    margin-right: 50px;
+
+    &::after {
+      right: 29px;
+    }
   }
 }
