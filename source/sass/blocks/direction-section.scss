@@ -3,23 +3,25 @@
 }
 
 .direction-section__wrapper {
+  position: relative;
   max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
   padding-top: 70px;
   padding-right: 25px;
   padding-left: 25px;
-  position: relative;
 
   @include tablet() {
     padding-top: 73px;
 
     &::after {
       @include pseudo();
-      background-image: url("../img/flags-back.png");
-      right: 40px;
-      top: 80px;
-      height: 574px;
-      width: 288px;
       z-index: 0;
+      top: 80px;
+      right: 40px;
+      width: 288px;
+      height: 574px;
+      background-image: url("../img/flags-back.png");
 
       @include retina() {
         background-image: url("../img/flags-back@2x.png");
@@ -29,12 +31,30 @@
 
     &::before {
       @include pseudo();
-      left: 40px;
       top: 406px;
+      left: 40px;
       width: 141px;
       height: 141px;
       border-radius: 20px;
       background-color: $color-blue-300;
+    }
+  }
+
+  @include desktop() {
+    display: grid;
+    padding-top: 160px;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 60px;
+    grid-row-gap: 50px;
+
+    &::after {
+      top: 87px;
+      right: 60px;
+    }
+
+    &::before {
+      top: 89px;
+      left: 59px;
     }
   }
 }
@@ -42,14 +62,23 @@
 .direction-section__heading {
   margin-bottom: 19px;
   padding-left: 25px;
+  z-index: 2;
 
   @include tablet() {
     margin-bottom: 58px;
-    padding-left: 48px;
+    padding-left: 47px;
+  }
+
+  @include desktop() {
+    margin-bottom: 9px;
+    padding-top: 5px;
+    padding-left: 111px;
+    grid-column: 2/3;
   }
 }
 
 .direction-section__text {
+  z-index: 2;
   margin-bottom: 60px;
   padding-right: 45px;
   padding-left: 25px;
@@ -57,27 +86,43 @@
 
   @include tablet() {
     width: 56%;
+    margin-bottom: 103px;
     padding-right: 0;
     padding-left: 50px;
-    margin-bottom: 103px;
+  }
+
+  @include desktop() {
+    width: 100%;
+    max-width: 348px;
+    margin-bottom: 48px;
+    margin-left: 112px;
+    padding-left: 0;
+    grid-column: 2/3;
   }
 }
 
 .direction-section__list {
   @include list();
-  margin-bottom: 26px;
   position: relative;
+  margin-bottom: 26px;
 
   @include tablet() {
+    margin-bottom: 46px;
     padding-right: 50px;
     padding-left: 50px;
-    margin-bottom: 46px;
+  }
+
+  @include desktop() {
+    padding-right: 0;
+    padding-left: 104px;
+    grid-row: 1/4;
+    margin-bottom: 0;
   }
 }
 
 .direction-section__item {
-  margin-bottom: 11px;
   position: relative;
+  margin-bottom: 11px;
 
   @include tablet() {
     display: grid;
@@ -144,6 +189,10 @@
     border-radius: 20px 0 0 20px;
     grid-template-columns: 1fr;
   }
+
+  @include desktop() {
+    padding-top: 24px;
+  }
 }
 
 .direction-section__country {
@@ -158,19 +207,28 @@
     line-height: 24px;
     margin-bottom: 5px;
   }
+
+  @include desktop() {
+    margin-bottom: 4px;
+  }
 }
 
 .direction-section__flag-container {
   position: absolute;
-  display: flex;
-  left: 25px;
   bottom: 78px;
+  left: 25px;
+  display: flex;
 
   @include tablet() {
     top: 18px;
     right: 150px;
-    left: auto;
     bottom: auto;
+    left: auto;
+  }
+
+  @include desktop() {
+    top: 23px;
+    right: 152px;
   }
 }
 
@@ -197,6 +255,10 @@
     font-size: 20px;
     line-height: 20px;
     margin-bottom: 20px;
+  }
+
+  @include desktop {
+    margin-bottom: 26px;
   }
 }
 
@@ -225,30 +287,40 @@
   @include tablet() {
     font-size: 20px;
     line-height: 20px;
-    grid-column: auto;
-    padding-left: 29px;
     margin-top: 0;
+    padding-left: 29px;
+    grid-column: auto;
 
     &::before {
+      left: -3px;
       width: 24px;
       height: 24px;
       background-size: 100%;
-      left: -3px;
     }
   }
 }
 
 .direction-section__button {
+  z-index: 2;
+
   &::after {
     right: 20px;
   }
 
   @include tablet() {
-    margin-left: 50px;
     margin-right: 50px;
+    margin-left: 50px;
 
     &::after {
       right: 29px;
     }
+  }
+
+  @include desktop() {
+    grid-column: 2/3;
+    margin-bottom: auto;
+    margin-right: auto;
+    margin-left: 113px;
+    padding-right: 102px;
   }
 }
