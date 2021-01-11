@@ -92,6 +92,7 @@
 
 .about-section__heading {
   position: relative;
+
   @include tablet() {
     z-index: 1;
     margin-bottom: 41px;
