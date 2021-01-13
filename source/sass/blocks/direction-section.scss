@@ -257,7 +257,7 @@
     margin-bottom: 20px;
   }
 
-  @include desktop {
+  @include desktop() {
     margin-bottom: 26px;
   }
 }

@@ -15,6 +15,29 @@
     border-bottom-left-radius: 60px;
     background-color: $color-blue-600;
     background-image: none;
+
+    &::before {
+      @include pseudo();
+      top: 57px;
+      right: 40px;
+      left: 40px;
+      height: 212px;
+      margin-right: auto;
+      margin-left: auto;
+      border-radius: 20px;
+      background-color: $color-blue-700;
+    }
+  }
+
+  @include desktop() {
+    &::before {
+      margin-left: auto;
+      margin-right: auto;
+      left: -1070px;
+      top: 70px;
+      width: 212px;
+      height: 212px;
+    }
   }
 }
 
@@ -45,20 +68,6 @@
         background-image: url("../img/about-tablet@2x.png");
       }
     }
-
-    &::before {
-      @include pseudo();
-      top: 57px;
-      right: 40px;
-      left: 40px;
-      // Это вообще бред, но я хз как его тянуть еще
-      width: 179%;
-      height: 212px;
-      margin-right: auto;
-      margin-left: auto;
-      border-radius: 20px;
-      background-color: $color-blue-700;
-    }
   }
 
   @include desktop() {
@@ -78,14 +87,6 @@
       @include retina() {
         background-image: url("../img/about-desktop@2x.png");
       }
-    }
-
-    &::before {
-      top: 0;
-      left: 60px;
-      width: 212px;
-      height: 212px;
-      margin: 0;
     }
   }
 }
