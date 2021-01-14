@@ -14,7 +14,8 @@
   }
 
   @include desktop() {
-    grid-template-columns: repeat(4, 25%);
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 60px;
   }
 }
 
@@ -120,18 +121,32 @@
     }
   }
 
-  //todo сделать стили
   @include desktop() {
     margin-right: 0;
     border-radius: 20px 0 0 20px;
     z-index: 0;
     min-height: 107px;
-    margin-left: -15px;
-    padding-top: 30px;
-    padding-right: 100px;
-    padding-bottom: 30px;
+    margin-left: 0;
+    margin-top: 0;
+    padding: 30px 100px 29px 32px;
+
+    &:first-child {
+      margin-left: 0;
+      margin-right: -60px;
+    }
+
+    &:nth-child(2) {
+      margin-left: -30px;
+      margin-right: -60px;
+    }
+
+    &:nth-child(3) {
+      margin-left: -30px;
+      margin-right: -60px;
+    }
 
     &:last-child {
+      margin-left: -30px;
       margin-right: 0;
       border-radius: 20px;
     }
