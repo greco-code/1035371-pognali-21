@@ -82,6 +82,10 @@
   @include tablet() {
     margin-bottom: 17px;
   }
+
+  @include desktop() {
+    margin-bottom: 21px;
+  }
 }
 
 .companion-item__transport {
