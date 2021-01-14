@@ -12,6 +12,38 @@
   padding-left: 50px;
   text-align: center;
   color: $color-blue-500;
+  position: relative;
+  display: flex;
+
+  &::before {
+    @include pseudo();
+    width: 8px;
+    height: 8px;
+    left: 27px;
+    top: 0;
+    bottom: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+    border-radius: 50%;
+  }
+
+  &--firsova {
+    &::before {
+      background-color: $color-red-150;
+    }
+  }
+
+  &--demin {
+    &::before {
+      background-color: $color-green-100;
+    }
+  }
+
+  @include tablet() {
+    font-size: 24px;
+    line-height: 22px;
+    margin-bottom: 24px;
+  }
 }
 
 .companion-item__photo {
@@ -20,6 +52,11 @@
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   width: 100%;
+
+  @include tablet() {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
 }
 
 .companion-item__hashtags {
@@ -29,12 +66,28 @@
   text-align: center;
   color: $color-gray-400;
   margin: 0 auto 12px;
+
+  @include tablet() {
+    font-size: 20px;
+    line-height: 23px;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-bottom: 23px;
+  }
 }
 
 .companion-item__flags-list {
   margin: -38px 40px 14px;
+
+  @include tablet() {
+    margin-bottom: 17px;
+  }
 }
 
 .companion-item__transport {
   margin-bottom: 23px;
+
+  @include tablet() {
+    margin-bottom: 28px;
+  }
 }

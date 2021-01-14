@@ -2,6 +2,11 @@
   background-color: $color-blue-100;
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
+
+  @include tablet() {
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+  }
 }
 
 .direction-section__wrapper {
@@ -13,6 +18,7 @@
 
   @include tablet() {
     padding-top: 73px;
+    padding-bottom: 81px;
 
     &::after {
       @include pseudo();
