@@ -1,0 +1,87 @@
+.contact-us {
+  @include list();
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+
+  @include tablet() {
+    display: none;
+  }
+}
+
+.contact-us__item {
+  &--auth {
+    flex-grow: 1;
+  }
+}
+
+.contact-us__link {
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 20px;
+  position: relative;
+  display: flex;
+  text-transform: uppercase;
+  color: $color-blue-700;
+  width: 40px;
+  height: 40px;
+
+  //&:active {
+  //  opacity: 0.3;
+  //}
+  //
+  &::before {
+    @include pseudo();
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+
+  &::after {
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+  }
+
+  &--tel {
+    &::before {
+      background-color: $color-yellow-400;
+    }
+
+    &::after {
+      @include pseudo();
+      width: 18px;
+      height: 18px;
+      background-image: url("../img/call.svg");
+      background-repeat: no-repeat;
+      right: 2px;
+    }
+  }
+
+  &--mail {
+    &::before {
+      background-color: $color-yellow-200;
+    }
+
+    &::after {
+      @include pseudo();
+      width: 18px;
+      height: 16px;
+      background-image: url("../img/mail2.svg");
+      background-repeat: no-repeat;
+    }
+  }
+
+  &--auth {
+    background-color: $color-yellow-100;
+    padding-top: 12px;
+    padding-bottom: 8px;
+    text-align: center;
+    border-radius: 30px;
+    width: 100%;
+    display: block;
+    flex-grow: 1;
+  }
+}

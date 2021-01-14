@@ -1,0 +1,172 @@
+.contacts-list {
+  @include list();
+  grid-column: 1/-1;
+
+  @include desktop() {
+    grid-column: 3/4;
+    grid-row: 1/2;
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    padding-left: 0;
+  }
+}
+
+.contacts-list__link {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 18px;
+  position: relative;
+  display: flex;
+  padding-top: 15px;
+  padding-bottom: 13px;
+  padding-left: 61px;
+  text-transform: uppercase;
+  color: $color-blue-600;
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &::before {
+    @include pseudo();
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 45px;
+    height: 45px;
+    margin-top: auto;
+    margin-bottom: auto;
+    border-radius: 50%;
+    background-color: $color-blue-700;
+
+    @include tablet() {
+      width: 68px;
+      height: 68px;
+    }
+
+    @include desktop() {
+      width: 50px;
+      height: 50px;
+    }
+  }
+
+  @include tablet() {
+    padding-top: 24px;
+    padding-bottom: 16px;
+    padding-left: 91px;
+
+    &:hover {
+      opacity: 0.7;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+
+  @include desktop() {
+    &:hover {
+      opacity: 0.7;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+
+
+  &--tel {
+    &::before {
+      @include desktop() {
+        background-color: $color-yellow-400;
+      }
+    }
+
+    &::after {
+      @include pseudo();
+      top: 0;
+      bottom: 0;
+      left: 13px;
+      width: 18px;
+      height: 17px;
+      margin-top: auto;
+      margin-bottom: auto;
+      background-image: url("../img/telephone.svg");
+      background-repeat: no-repeat;
+
+      @include tablet() {
+        left: 20px;
+        width: 28px;
+        height: 26px;
+        background-size: 100%;
+      }
+
+      @include desktop() {
+        left: 16px;
+        width: 18px;
+        height: 18px;
+        background-image: url("../img/call.svg");
+      }
+    }
+  }
+
+  &--mail {
+    &::before {
+      @include desktop() {
+        background-color: $color-yellow-200;
+      }
+    }
+
+    &::after {
+      @include pseudo();
+      top: 0;
+      bottom: 0;
+      left: 10px;
+      width: 24px;
+      height: 25px;
+      margin-top: auto;
+      margin-bottom: auto;
+      background-image: url("../img/mail.svg");
+      background-repeat: no-repeat;
+
+      @include tablet() {
+        left: 17px;
+        width: 36px;
+        height: 38px;
+        background-size: 100%;
+      }
+
+      @include desktop() {
+        width: 16px;
+        height: 14px;
+        background-image: url("../img/mail2.svg");
+      }
+    }
+  }
+
+  @include tablet() {
+    font-size: 28px;
+    line-height: 28px;
+  }
+
+  @include desktop() {
+    padding: 0;
+    width: 50px;
+    height: 50px;
+  }
+}
+
+.contacts-list__content {
+  @include desktop() {
+    display: none;
+  }
+}
+
+.contacts-list--hero .contacts-list__content {
+  display: none;
+}
