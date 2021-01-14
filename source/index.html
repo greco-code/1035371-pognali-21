@@ -184,7 +184,7 @@
       <a href="#" class="direction-section__button button">Показать все</a>
     </div>
   </section>
-  <section class="companions-section section">
+  <section class="companions-section section page-main__companions-item">
     <div class="companions-section__wrapper">
       <h2 class="companions-section__heading section__heading">Попутчики</h2>
       <p class="companions-section__text section__text">Все мы индивидуальны и у каждого свой взгляд на идеальный отдых. Одному нужен пляж и коктейль, а другому маршрут для
@@ -192,52 +192,93 @@
       <p class="companions-section__slogan section__slogan">Теперь можно легко найти единомышленников!</p>
       <ul class="companions-section__list">
         <li class="companions-section__item">
-          <img src="" alt="Аватар Тани Фирсовой" class="companions-section__photo">
-          <div class="level">
-            <!--          <svg class="level__circle"></svg>-->
-            <span class="level__value">99</span>
-            <span class="level__text">Level</span>
-          </div>
-          <p class="companions-section__name">Таня Фирсова</p>
-          <p class="companions-section__hashtags">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
-          <ul class="transport-list companions-section__transport">
-            <li class="transport-list__item">
-              <svg class="transport-list__icon" width="21" height="21"></svg>
-            </li>
-            <li class="transport-list__item">
-              <svg class="transport-list__icon" width="17" height="19"></svg>
-            </li>
-            <li class="transport-list__item">
-              <svg class="transport-list__icon" width="24" height="24"></svg>
-            </li>
-            <li class="transport-list__item">
-              <svg class="transport-list__icon" width="21" height="23"></svg>
-            </li>
-          </ul>
+          <a href="" class="companion-item companions-section__item-link">
+            <picture>
+              <source media="(min-width: 768px)" srcset="img/firsova-desktop.webp, img/firsova-desktop@2x.webp 2x" type="image/webp">
+              <source srcset="img/firsova-mobile.webp, img/firsova-mobile@2x.webp 2x" type="image/webp">
+              <source media="(min-width: 768px)" src="img/firsova-desktop.jpg" srcset="img/firsova-desktop@2x.jpg 2x">
+              <img src="img/firsova-mobile.jpg" srcset="img/firsova-mobile@2x.jpg 2x" alt="Аватар Тани Фирсовой" class="companion-item__photo">
+            </picture>
+            <!--          <div class="level">-->
+            <!--                      <svg class="level__circle"></svg>-->
+            <!--            <span class="level__value">99</span>-->
+            <!--            <span class="level__text">Level</span>-->
+            <!--          </div>-->
+            <ul class="companion-item__flags-list flags-list">
+              <li class="flags-list__item flags-list__item--sri-lanka">
+                <span class="flags-list__tooltip">Шри-Ланка</span>
+              </li>
+              <li class="flags-list__item flags-list__item--thailand">
+                <span class="flags-list__tooltip">Таиланд</span>
+              </li>
+              <li class="flags-list__item flags-list__item--seychelles">
+                <span class="flags-list__tooltip">Сейшелы</span>
+              </li>
+            </ul>
+            <p class="companion-item__name">Таня Фирсова</p>
+            <p class="companion-item__hashtags">#ЗОЖ #ПП #Фитнес #пляж<br>#авокадо #смузи</p>
+            <ul class="transport-list companion-item__transport">
+              <li class="transport-list__item transport-list__item--plane">
+                <span class="transport-list__tooltip">Авиаперелет</span>
+                <span class="visually-hidden">Да</span>
+              </li>
+              <li class="transport-list__item transport-list__item--auto transport-list__item--no">
+                <span class="transport-list__tooltip">Автотранспорт</span>
+                <span class="visually-hidden">Да</span>
+              </li>
+              <li class="transport-list__item transport-list__item--bicycle transport-list__item--no">
+                <span class="transport-list__tooltip">Велосипед</span>
+                <span class="visually-hidden">Нет</span>
+              </li>
+              <li class="transport-list__item transport-list__item--walk transport-list__item--no">
+                <span class="transport-list__tooltip">Пешком</span>
+                <span class="visually-hidden">Да</span>
+              </li>
+            </ul>
+          </a>
         </li>
         <li class="companions-section__item">
-          <img src="" alt="Аватар Пети Демина" class="companions-section__photo">
-          <div class="level">
-            <!--          <svg class="level__circle"></svg>-->
-            <span class="level__value">80</span>
-            <span class="level__text">Level</span>
-          </div>
-          <p class="companions-section__name">Петя Демин</p>
-          <p class="companions-section__hashtags">#бургер #бар #футбол #концерт #крафт</p>
-          <ul class="transport-list companions-section__transport">
-            <li class="transport-list__item">
-              <svg class="transport-list__icon" width="21" height="21"></svg>
-            </li>
-            <li class="transport-list__item">
-              <svg class="transport-list__icon" width="17" height="19"></svg>
-            </li>
-            <li class="transport-list__item">
-              <svg class="transport-list__icon" width="24" height="24"></svg>
-            </li>
-            <li class="transport-list__item">
-              <svg class="transport-list__icon" width="21" height="23"></svg>
-            </li>
-          </ul>
+          <a class="companion-item companions-section__item-link">
+            <picture>
+              <source media="(min-width: 768px)" srcset="img/demin-desktop.webp, img/demin-desktop@2x.webp 2x" type="image/webp">
+              <source srcset="img/demin-mobile.webp, img/demin-mobile@2x.webp 2x" type="image/webp">
+              <source media="(min-width: 768px)" src="img/demin-desktop.jpg" srcset="img/demin-desktop@2x.jpg 2x">
+              <img src="img/demin-mobile.jpg" srcset="img/demin-mobile@2x.jpg 2x" alt="Аватар Пети Демина" class="companion-item__photo">
+            </picture>
+            <!--          <div class="level">-->
+            <!--            <svg class="level__circle"></svg>-->
+            <!--            <span class="level__value">80</span>-->
+            <!--            <span class="level__text">Level</span>-->
+            <!--          </div>-->
+            <ul class="companion-item__flags-list flags-list">
+              <li class="flags-list__item flags-list__item--belgium">
+                <span class="flags-list__tooltip">Бельгия</span>
+              </li>
+              <li class="flags-list__item flags-list__item--czech">
+                <span class="flags-list__tooltip">Чехия</span>
+              </li>
+            </ul>
+            <p class="companion-item__name">Петя Демин</p>
+            <p class="companion-item__hashtags">#бургер #бар #футбол #концерт #крафт</p>
+            <ul class="transport-list companion-item__transport">
+              <li class="transport-list__item transport-list__item--plane">
+                <span class="transport-list__tooltip">Авиаперелет</span>
+                <span class="visually-hidden">Да</span>
+              </li>
+              <li class="transport-list__item transport-list__item--auto">
+                <span class="transport-list__tooltip">Автотранспорт</span>
+                <span class="visually-hidden">Да</span>
+              </li>
+              <li class="transport-list__item transport-list__item--bicycle transport-list__item--no">
+                <span class="transport-list__tooltip">Велосипед</span>
+                <span class="visually-hidden">Нет</span>
+              </li>
+              <li class="transport-list__item transport-list__item--walk">
+                <span class="transport-list__tooltip">Пешком</span>
+                <span class="visually-hidden">Да</span>
+              </li>
+            </ul>
+          </a>
         </li>
       </ul>
       <a class="companions-section__button button" href="">Показать всех</a>

@@ -1,0 +1,67 @@
+.transport-list {
+  @include list();
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.transport-list__item {
+  display: flex;
+  margin-right: 13px;
+
+  &::before {
+    position: relative;
+    content: "";
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+  }
+
+  &--plane {
+    &::before {
+      width: 21px;
+      height: 21px;
+      background-image: url("../img/plane.svg");
+    }
+  }
+
+  &--auto {
+    &::before {
+      width: 17px;
+      height: 19px;
+      background-image: url("../img/bus.svg");
+    }
+  }
+
+  &--bicycle {
+    &::before {
+      width: 24px;
+      height: 24px;
+      background-image: url("../img/bicycle.svg");
+    }
+  }
+
+  &--walk {
+    &::before {
+      width: 21px;
+      height: 23px;
+      background-image: url("../img/run.svg");
+    }
+  }
+
+  &--no {
+    &::before {
+      opacity: 0.2;
+    }
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.transport-list__tooltip {
+  display: none;
+}

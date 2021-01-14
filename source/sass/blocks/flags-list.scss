@@ -1,0 +1,61 @@
+.flags-list {
+  @include list();
+  display: flex;
+  justify-content: center;
+}
+
+.flags-list__tooltip {
+  display: none;
+}
+
+.flags-list__item {
+  display: flex;
+  margin-right: 20px;
+
+  &::before {
+    position: relative;
+    content: "";
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 35px;
+    height: 24px;
+    background-repeat: no-repeat;
+  }
+
+  &--sri-lanka {
+    &::before {
+      background-image: url("../img/flag-sri-lanka.svg");
+    }
+  }
+
+  &--thailand {
+    &::before {
+      background-image: url("../img/flag-thailand.svg");
+    }
+  }
+
+  &--seychelles {
+    &::before {
+      background-image: url("../img/flag-seychelles.svg");
+    }
+  }
+
+  &--belgium {
+    &::before {
+      background-image: url("../img/flag-belgium.svg");
+    }
+  }
+
+  &--czech {
+    &::before {
+      background-image: url("../img/flag-czech.svg");
+    }
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
