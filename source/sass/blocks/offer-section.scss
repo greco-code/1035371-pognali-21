@@ -1,0 +1,111 @@
+.offer-section {
+  counter-reset: offer;
+  background-color: $color-blue-100;
+  border-bottom-right-radius: 30px;
+  border-bottom-left-radius: 30px;
+}
+
+.offer-section__wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 53px 25px 38px;
+
+  &::after {
+    @include pseudo();
+    top: 37px;
+    right: 25px;
+    width: 100px;
+    height: 100px;
+    background-image: url("../img/rates.png");
+
+    @include retina() {
+      background-image: url("../img/rates@2x.png");
+      background-size: 100%;
+    }
+  }
+}
+
+.offer-section__heading {
+  width: 50%;
+  margin-bottom: 42px;
+  margin-left: 25px;
+}
+
+.offer-section__list {
+  @include list();
+  line-height: 16px;
+  margin-right: 45px;
+  margin-left: 25px;
+  color: $color-gray-400;
+  border-top: 1px solid $color-gray-100;
+  margin-bottom: 30px;
+}
+
+.offer-section__item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1px;
+  padding-top: 13px;
+  padding-bottom: 13px;
+  border-bottom: 1px solid $color-gray-100;
+
+  &::after {
+    line-height: 16px;
+    position: absolute;
+    top: -24px;
+    right: -44px;
+    bottom: 0;
+    width: 34px;
+    height: 34px;
+    margin-top: auto;
+    margin-bottom: auto;
+    padding: 10px 13px;
+    color: $color-white;
+    border-radius: 50%;
+  }
+
+  &:first-child {
+    &::after {
+      content: counter(offer);
+      counter-increment: offer;
+      background-color: $color-yellow-400;
+    }
+  }
+
+  &:nth-child(2) {
+    &::after {
+      content: counter(offer);
+      counter-increment: offer;
+      background-color: $color-yellow-300;
+    }
+  }
+
+  &:nth-child(3) {
+    &::after {
+      content: counter(offer);
+      counter-increment: offer;
+      background-color: $color-yellow-200;
+    }
+  }
+}
+
+
+.offer-section__value {
+  margin-top: 0;
+  margin-bottom: 6px;
+}
+
+.offer-section__price {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.offer-section__link {
+  font-weight: 700;
+  line-height: 16px;
+  margin-right: auto;
+  margin-left: auto;
+  color: $color-blue-500;
+}
