@@ -305,27 +305,30 @@
     </div>
   </section>
   <section class="feedback-section section">
-    <h2 class="visually-hidden">Обратная связь</h2>
-    <p class="feedback-section__heading section__heading">Заинтересовались?</p>
-    <p class="feedback-section__text section__text">Зарегистрируйтесь, это быстро и бесплатно! Уже зарегистрированы? Тогда скорее <a class="feedback-section__link" href="#">авторизуйтесь</a>.
-    </p>
-    <form action="https://echo.htmlacademy.ru" method="post" class="feedback-section__form">
-      <label for="email" class="feedback-section__label">
-        <input class="feedback-section__input" type="email" required id="email">
-      </label>
-      <button class="feedback-section__button button" type="submit">
-        <span class="visually-hidden">Отправить</span>
-      </button>
-    </form>
-    <p class="feedback-section__remark section__text">Остались вопросы? Мы с радостью на них ответим!</p>
-    <!--    <ul class="contacts-list contacts-list&#45;&#45;full">-->
-    <!--      <li class="contacts-list__item">-->
-    <!--        <a class="contacts-list__link contacts-list__link&#45;&#45;tel" href="tel:88005558628">8 800 555-86-28</a>-->
-    <!--      </li>-->
-    <!--      <li class="contacts-list__item">-->
-    <!--        <a class="contacts-list__link contacts-list__link&#45;&#45;mail" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>-->
-    <!--      </li>-->
-    <!--    </ul>-->
+    <div class="feedback-section__wrapper">
+      <h2 class="visually-hidden">Обратная связь</h2>
+      <p class="feedback-section__heading section__heading">Заинтересовались?</p>
+      <p class="feedback-section__text section__text">Зарегистрируйтесь, это быстро и&nbsp;бесплатно! Уже зарегистрированы? Тогда скорее <a class="feedback-section__link" href="#">авторизуйтесь</a>.
+      </p>
+      <form action="https://echo.htmlacademy.ru" method="post" class="feedback-section__form">
+        <label for="email" class="feedback-section__label">
+          <input class="feedback-section__input" type="email" required id="email" placeholder="E-mail">
+        </label>
+        <button class="feedback-section__button button" type="submit">
+          <span class="visually-hidden">Отправить</span>
+        </button>
+      </form>
+      <!--      todo как здесь поставить пробел перед "мы"???-->
+      <p class="feedback-section__remark section__text">Остались вопросы?<br class="feedback-section__br">Мы с радостью на них ответим!</p>
+      <ul class="contacts-list contacts-list--feedback feedback-section__contacts">
+        <li class="contacts-list__item">
+          <a class="contacts-list__link contacts-list__link--tel" href="tel:88005558628">8 800 555-86-28</a>
+        </li>
+        <li class="contacts-list__item">
+          <a class="contacts-list__link contacts-list__link--mail" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+        </li>
+      </ul>
+    </div>
   </section>
   <section class="route-section section">
     <p class="route-section__address">ул. Большая Конюшенная, 19/8</p>

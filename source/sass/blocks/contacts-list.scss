@@ -170,3 +170,11 @@
 .contacts-list--hero .contacts-list__content {
   display: none;
 }
+
+.contacts-list--feedback {
+  display: block;
+}
+
+.contacts-list--feedback .contacts-list__link {
+  color: $color-yellow-100;
+}
