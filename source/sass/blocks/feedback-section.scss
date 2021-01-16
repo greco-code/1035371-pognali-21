@@ -3,6 +3,8 @@
   border-bottom-right-radius: 30px;
   border-bottom-left-radius: 30px;
   background-color: $color-blue-600;
+  z-index: 1;
+  position: relative;
 
   @include tablet() {
     border-bottom-right-radius: 60px;
