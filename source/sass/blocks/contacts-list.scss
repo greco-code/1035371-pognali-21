@@ -3,12 +3,12 @@
   grid-column: 1/-1;
 
   @include desktop() {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    padding-left: 0;
     grid-column: 3/4;
     grid-row: 1/2;
-    display: flex;
-    justify-content: flex-end;
-    flex-wrap: wrap;
-    padding-left: 0;
   }
 }
 
@@ -155,9 +155,9 @@
   }
 
   @include desktop() {
-    padding: 0;
     width: 50px;
     height: 50px;
+    padding: 0;
   }
 }
 
@@ -173,8 +173,64 @@
 
 .contacts-list--feedback {
   display: block;
+
+  @include desktop() {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .contacts-list--feedback .contacts-list__link {
   color: $color-yellow-100;
+
+  @include desktop() {
+    display: flex;
+    width: auto;
+    height: auto;
+    padding-top: 35px;
+    padding-bottom: 35px;
+    color: $color-yellow-100;
+
+    &::before {
+      left: -120px;
+      width: 90px;
+      height: 90px;
+      background-color: $color-blue-700;
+    }
+
+    &::after {
+      top: 0;
+      bottom: 0;
+      left: -120px;
+      margin: auto;
+    }
+
+    &--tel {
+      &::after {
+        left: -94px;
+        width: 36px;
+        height: 34px;
+        background-image: url("../img/telephone.svg");
+      }
+    }
+
+    &--mail {
+      &::after {
+        left: -99px;
+        width: 47px;
+        height: 50px;
+        background-image: url("../img/mail.svg");
+      }
+    }
+  }
+}
+
+.contacts-list--feedback .contacts-list__item {
+  @include desktop() {
+    margin-right: 231px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
 }

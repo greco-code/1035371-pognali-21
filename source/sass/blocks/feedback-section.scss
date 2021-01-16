@@ -15,9 +15,16 @@
   display: flex;
   flex-direction: column;
   padding: 102px 25px 27px;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
 
   @include tablet() {
     padding: 136px 40px 60px;
+  }
+
+  @include desktop() {
+    padding: 169px 60px 97px;
   }
 }
 
@@ -42,6 +49,12 @@
   @include tablet() {
     margin-bottom: 63px;
   }
+
+  @include desktop() {
+    padding-left: 250px;
+    padding-right: 250px;
+    margin-bottom: 54px;
+  }
 }
 
 .feedback-section__remark {
@@ -54,6 +67,10 @@
     line-height: 30px;
     letter-spacing: 0.01em;
     margin-bottom: 40px;
+  }
+
+  @include desktop() {
+    margin-bottom: 41px;
   }
 }
 
@@ -71,6 +88,12 @@
     margin-right: 36px;
     margin-left: 36px;
     margin-bottom: 60px;
+  }
+
+  @include desktop() {
+    margin-left: 73px;
+    margin-right: 73px;
+    margin-bottom: 71px;
   }
 }
 
@@ -114,6 +137,24 @@
     width: 80px;
     border-radius: 0 20px 20px 0;
   }
+
+  @include desktop() {
+    width: auto;
+    padding-left: 36px;
+    padding-right: 151px;
+  }
+}
+
+.feedback-section__button-text {
+  display: none;
+
+  @include desktop() {
+    font-family: $font-stack;
+    display: block;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: auto;
+  }
 }
 
 .feedback-section__contacts {
@@ -126,6 +167,11 @@
 
   @include tablet() {
     margin-left: 35px;
+  }
+
+  @include desktop() {
+    margin-left: 347px;
+    margin-right: auto;
   }
 }
 
