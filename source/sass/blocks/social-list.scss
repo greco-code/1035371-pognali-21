@@ -63,3 +63,13 @@
     }
   }
 }
+
+.social-list--footer .social-list__link {
+  position: relative;
+  display: block;
+  background-color: $color-yellow-100;
+  background-position: center center;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+}
