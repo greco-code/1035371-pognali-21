@@ -1,0 +1,62 @@
+.route-section {
+  margin-top: -40px;
+}
+
+.route-section__wrapper {
+  border-bottom-right-radius: 30px;
+  border-bottom-left-radius: 30px;
+  background-color: $color-yellow-100;
+  padding: 57px 25px 35px;
+
+  @include tablet() {
+    border-bottom-right-radius: 60px;
+    border-bottom-left-radius: 60px;
+  }
+}
+
+.route-section__address {
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 700;
+  color: $color-blue-500;
+  margin-left: 61px;
+  text-transform: uppercase;
+  display: flex;
+  position: relative;
+  margin-bottom: 32px;
+
+  &::before {
+    @include pseudo();
+    width: 45px;
+    height: 45px;
+    left: -61px;
+    top: 0;
+    bottom: 3px;
+    margin: auto 0;
+    background-color: $color-blue-600;
+    border-radius: 50%;
+  }
+
+  &::after {
+    @include pseudo();
+    width: 21px;
+    height: 21px;
+    background-image: url("../img/location.svg");
+    left: -49px;
+    top: 10px;
+  }
+}
+
+.route-section__button {
+  background-color: $transparent;
+  border: 3px solid $color-blue-600;
+  padding-top: 19px;
+  padding-bottom: 19px;
+  padding-left: 19px;
+}
+
+.route-section__map {
+  outline: none;
+  border: none;
+  width: 100%;
+}
