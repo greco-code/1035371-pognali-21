@@ -1,62 +1,146 @@
 .route-section {
   margin-top: -40px;
+
+  @include tablet() {
+    margin-top: -60px;
+  }
 }
 
 .route-section__wrapper {
+  position: relative;
+  z-index: 0;
+  padding: 57px 25px 35px;
   border-bottom-right-radius: 30px;
   border-bottom-left-radius: 30px;
   background-color: $color-yellow-100;
-  padding: 57px 25px 35px;
 
   @include tablet() {
+    padding: 102px 40px 84px;
     border-bottom-right-radius: 60px;
     border-bottom-left-radius: 60px;
+  }
+
+  @include desktop() {
+    padding: 119px 60px 62px;
+  }
+}
+
+.route-section__container {
+  @include desktop() {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1440px;
+    margin-right: auto;
+    margin-left: auto;
   }
 }
 
 .route-section__address {
   font-size: 16px;
-  line-height: 22px;
   font-weight: 700;
-  color: $color-blue-500;
+  line-height: 22px;
+  position: relative;
+  display: flex;
+  margin-bottom: 32px;
   margin-left: 61px;
   text-transform: uppercase;
-  display: flex;
-  position: relative;
-  margin-bottom: 32px;
+  color: $color-blue-500;
 
   &::before {
     @include pseudo();
-    width: 45px;
-    height: 45px;
-    left: -61px;
     top: 0;
     bottom: 3px;
+    left: -61px;
+    width: 45px;
+    height: 45px;
     margin: auto 0;
-    background-color: $color-blue-600;
     border-radius: 50%;
+    background-color: $color-blue-600;
   }
 
   &::after {
     @include pseudo();
+    top: 0;
+    bottom: 0;
+    left: -49px;
     width: 21px;
     height: 21px;
+    margin: auto 0;
     background-image: url("../img/location.svg");
-    left: -49px;
-    top: 10px;
+  }
+
+  @include tablet() {
+    font-size: 28px;
+    line-height: 28px;
+    margin-bottom: 62px;
+    margin-left: 129px;
+
+    &::before {
+      left: -93px;
+      width: 68px;
+      height: 68px;
+    }
+
+    &::after {
+      left: -75px;
+      width: 32px;
+      height: 32px;
+      background-repeat: no-repeat;
+      background-size: 100%;
+    }
+  }
+
+  @include desktop() {
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 344px;
+
+    &::before {
+      left: -121px;
+      width: 90px;
+      height: 90px;
+    }
+
+    &::after {
+      left: -97px;
+      width: 42px;
+      height: 42px;
+    }
   }
 }
 
 .route-section__button {
-  background-color: $transparent;
-  border: 3px solid $color-blue-600;
   padding-top: 19px;
   padding-bottom: 19px;
   padding-left: 19px;
+  border: 3px solid $color-blue-600;
+  background-color: $transparent;
+
+  @include tablet() {
+    font-size: 24px;
+    line-height: 24px;
+    margin-right: 36px;
+    margin-left: 36px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-left: 34px;
+  }
+
+  @include desktop() {
+    margin-right: 78px;
+  }
 }
 
 .route-section__map {
-  outline: none;
-  border: none;
   width: 100%;
+  height: 424px;
+  margin-top: -30px;
+  border: none;
+  outline: none;
+
+  @include tablet() {
+    height: 581px;
+    margin-top: -60px;
+  }
 }
