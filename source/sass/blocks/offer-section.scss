@@ -1,8 +1,13 @@
 .offer-section {
   counter-reset: offer;
-  background-color: $color-blue-100;
   border-bottom-right-radius: 30px;
   border-bottom-left-radius: 30px;
+  background-color: $color-blue-100;
+
+  @include tablet() {
+    border-bottom-right-radius: 60px;
+    border-bottom-left-radius: 60px;
+  }
 }
 
 .offer-section__wrapper {
@@ -24,22 +29,62 @@
       background-size: 100%;
     }
   }
+
+  @include tablet() {
+    padding: 74px 40px 85px;
+
+    &::after {
+      z-index: 2;
+      bottom: 45px;
+      top: auto;
+      right: 85px;
+    }
+  }
 }
 
 .offer-section__heading {
   width: 50%;
   margin-bottom: 42px;
   margin-left: 25px;
+
+  @include tablet() {
+    width: auto;
+    margin-right: auto;
+    margin-bottom: 75px;
+    margin-left: auto;
+  }
 }
 
 .offer-section__list {
   @include list();
   line-height: 16px;
   margin-right: 45px;
+  margin-bottom: 30px;
   margin-left: 25px;
   color: $color-gray-400;
   border-top: 1px solid $color-gray-100;
-  margin-bottom: 30px;
+
+  @include tablet() {
+    font-size: 28px;
+    font-weight: 300;
+    line-height: 28px;
+    position: relative;
+    z-index: 2;
+    margin-right: 35px;
+    margin-bottom: 57px;
+    margin-left: 90px;
+
+    &::after {
+      @include pseudo();
+      z-index: -1;
+      top: -44px;
+      right: -35px;
+      width: 198px;
+      height: 144%;
+      border-radius: 20px;
+      background-color: $color-blue-300;
+    }
+  }
 }
 
 .offer-section__item {
@@ -89,17 +134,58 @@
       background-color: $color-yellow-200;
     }
   }
+
+  @include tablet() {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 3px;
+    padding-top: 17px;
+    padding-bottom: 17px;
+
+    &::after {
+      top: -4px;
+      right: auto;
+      left: -90px;
+      width: 68px;
+      height: 68px;
+      padding: 27px 28px 24px;
+    }
+
+    &:nth-child(2) {
+      &::after {
+        top: 0;
+      }
+    }
+
+    &:nth-child(3) {
+      &::after {
+        top: 4px;
+      }
+    }
+  }
 }
 
 
 .offer-section__value {
   margin-top: 0;
   margin-bottom: 6px;
+
+  @include tablet() {
+    font-size: 28px;
+    font-weight: 300;
+    line-height: 28px;
+    margin-bottom: 0;
+  }
 }
 
 .offer-section__price {
   margin-top: 0;
   margin-bottom: 0;
+
+  @include tablet() {
+    max-width: 130px;
+  }
 }
 
 .offer-section__link {
@@ -108,4 +194,29 @@
   margin-right: auto;
   margin-left: auto;
   color: $color-blue-500;
+
+  @include tablet() {
+    font-size: 20px;
+    line-height: 20px;
+    position: relative;
+    display: flex;
+    margin-right: 25%;
+    margin-left: 89px;
+
+    &::before {
+      @include pseudo();
+      top: 0;
+      left: -89px;
+      bottom: 0;
+      width: 68px;
+      height: 68px;
+      margin-top: auto;
+      margin-bottom: auto;
+      background-color: $color-blue-300;
+      background-image: url("../img/businessman.svg");
+      background-repeat: no-repeat;
+      border-radius: 50%;
+      background-position: center center;
+    }
+  }
 }
