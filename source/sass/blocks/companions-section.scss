@@ -75,7 +75,7 @@
   }
 
   @include tablet() {
-    padding: 204px 50px 132px;
+    padding: 204px 50px 87px;
 
     &::before {
       @include pseudo();
