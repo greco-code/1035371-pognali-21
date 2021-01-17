@@ -11,6 +11,7 @@
 .flags-list__item {
   display: flex;
   margin-right: 20px;
+  position: relative;
 
   &::before {
     position: relative;
@@ -57,5 +58,35 @@
 
   &:last-child {
     margin-right: 0;
+  }
+
+  &::after {
+    position: absolute;
+    bottom: -250%;
+    left: 50%;
+    display: none;
+    padding: 20px 18px 18px;
+    content: attr(data-tooltip);
+    transform: translateX(-50%);
+    color: $color-white;
+    background-color: $color-blue-700;
+    z-index: 100;
+    width: auto;
+  }
+
+  //todo куда мне треугольник прифигачить?
+  //&::before {
+  //  @include pseudo();
+  //  top: -40%;
+  //  left: 50%;
+  //  display: none;
+  //  width: 10px;
+  //  height: 10px;
+  //  transform: translateX(-50%) rotate(45deg);
+  //  background-color: $color-blue-600;
+  //}
+
+  &:hover::after {
+    display: block;
   }
 }

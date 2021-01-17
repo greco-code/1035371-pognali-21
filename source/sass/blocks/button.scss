@@ -35,4 +35,16 @@
       right: 33px;
     }
   }
+
+  &:hover {
+    background-color: $color-yellow-200;
+  }
+
+  &:active {
+    color: rgba($color-blue-500, 0.3);
+
+    &::after {
+      opacity: 0.3;
+    }
+  }
 }

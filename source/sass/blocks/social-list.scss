@@ -93,5 +93,19 @@
 .social-list--footer .social-list__link {
   border-radius: 50%;
   background-color: $color-yellow-100;
+
+  &:hover {
+    opacity: 1;
+    background-color: $color-yellow-200;
+  }
+
+  &:active {
+    background-color: $color-yellow-200;
+    opacity: 1;
+  }
+
+  &:active .social-list__icon {
+    fill: rgba($color-blue-600, 0.3);
+  }
 }
 

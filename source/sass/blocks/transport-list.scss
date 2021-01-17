@@ -1,52 +1,55 @@
 .transport-list {
   @include list();
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 }
 
 .transport-list__item {
+  position: relative;
   display: flex;
-  margin-right: 13px;
+  margin-right: 4px;
 
   &::before {
     position: relative;
-    content: "";
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
     margin: auto;
+    content: "";
+    background-repeat: no-repeat;
+    background-position: center center;
   }
 
   &--plane {
     &::before {
-      width: 21px;
-      height: 21px;
+      width: 30px;
+      height: 30px;
       background-image: url("../img/plane.svg");
     }
   }
 
   &--auto {
     &::before {
-      width: 17px;
-      height: 19px;
+      width: 30px;
+      height: 30px;
       background-image: url("../img/bus.svg");
     }
   }
 
   &--bicycle {
     &::before {
-      width: 24px;
-      height: 24px;
+      width: 30px;
+      height: 30px;
       background-image: url("../img/bicycle.svg");
     }
   }
 
   &--walk {
     &::before {
-      width: 21px;
-      height: 23px;
+      width: 30px;
+      height: 30px;
       background-image: url("../img/run.svg");
     }
   }
@@ -60,8 +63,33 @@
   &:last-child {
     margin-right: 0;
   }
-}
 
-.transport-list__tooltip {
-  display: none;
+  &::after {
+    position: absolute;
+    bottom: -250%;
+    left: 50%;
+    display: none;
+    padding: 20px 18px 18px;
+    content: attr(data-tooltip);
+    transform: translateX(-50%);
+    color: $color-white;
+    background-color: $color-blue-700;
+    z-index: 100;
+  }
+
+  //todo куда мне треугольник прифигачить?
+  //&::before {
+  //  @include pseudo();
+  //  top: -40%;
+  //  left: 50%;
+  //  display: none;
+  //  width: 10px;
+  //  height: 10px;
+  //  transform: translateX(-50%) rotate(45deg);
+  //  background-color: $color-blue-600;
+  //}
+
+  &:hover::after {
+    display: block;
+  }
 }

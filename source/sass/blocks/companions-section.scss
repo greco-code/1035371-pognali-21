@@ -61,7 +61,6 @@
 
   &::after {
     @include pseudo();
-    z-index: -1;
     top: 68px;
     right: 25px;
     width: 143px;
@@ -147,6 +146,8 @@
   margin-right: 25px;
   margin-bottom: 21px;
   margin-left: 24px;
+  position: relative;
+  z-index: 2;
 
   @include tablet() {
     margin-bottom: 41px;
@@ -227,6 +228,16 @@
 
   @include tablet() {
     border-radius: 20px;
+  }
+
+  &:hover {
+    box-shadow: 0 6px 21px 0 rgba(0, 0, 0, 0.08);
+  }
+
+  &:hover .companion-item__photo {
+    //todo так и не понял, что с этим делать
+    transform: scale(1.2);
+    transition: 1s;
   }
 }
 

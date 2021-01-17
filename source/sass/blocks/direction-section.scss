@@ -2,6 +2,8 @@
   background-color: $color-blue-100;
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
+  z-index: 2;
+  position: relative;
 
   @include tablet() {
     border-bottom-left-radius: 60px;

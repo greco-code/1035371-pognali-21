@@ -130,6 +130,16 @@
   @include desktop() {
     margin-right: 78px;
   }
+
+  &:hover {
+    color: $color-white;
+    background-color: $color-blue-600;
+  }
+
+  &:active {
+    color: rgba($color-white, 0.3);
+    background-color: $color-blue-600;
+  }
 }
 
 .route-section__map {
