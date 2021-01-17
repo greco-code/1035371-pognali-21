@@ -23,15 +23,26 @@
 .social-list__item {
   @include tablet() {
     margin-right: 9px;
+
+    &:last-child {
+      margin-right: 0;
+    }
   }
 }
 
 .social-list__link {
-  display: block;
-  padding: 13px;
+  display: flex;
+  padding: 0;
+  width: 45px;
+  height: 45px;
 
   &:active {
     opacity: 0.3;
+  }
+
+  @include tablet() {
+    width: 62px;
+    height: 62px;
   }
 
   @include desktop() {
@@ -46,15 +57,34 @@
 }
 
 .social-list__icon {
+  display: block;
+  margin: auto;
+  vertical-align: center;
+
+  &--fb {
+    width: 21px;
+    height: 21px;
+  }
+
+  &--vk {
+    width: 23px;
+    height: 23px;
+  }
+
+  &--insta {
+    width: 18px;
+    height: 18px;
+  }
+
   @include tablet() {
     &--fb {
-      width: 14px;
+      width: 28px;
       height: 28px;
     }
 
     &--vk {
       width: 31px;
-      height: 16px;
+      height: 31px;
     }
 
     &--insta {
@@ -64,12 +94,21 @@
   }
 }
 
-.social-list--footer .social-list__link {
-  position: relative;
-  display: block;
-  background-color: $color-yellow-100;
-  background-position: center center;
-  border-radius: 50%;
-  width: 45px;
-  height: 45px;
+.social-list--footer {
+  @include tablet() {
+    padding: 0;
+    grid-column: 2/3;
+  }
 }
+
+.social-list--footer .social-list__item {
+  @include tablet() {
+    margin-right: 0;
+  }
+}
+
+.social-list--footer .social-list__link {
+  border-radius: 50%;
+  background-color: $color-yellow-100;
+}
+

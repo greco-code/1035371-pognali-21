@@ -143,16 +143,6 @@
   margin-left: auto;
   margin-right: auto;
 
-  &--opened,
-  &--nojs {
-    padding-bottom: 22px;
-    background-color: $color-white;
-
-    @include desktop() {
-      background-color: $color-blue-700;
-    }
-  }
-
   @include tablet() {
     padding: 40px 40px 68px;
     grid-template-columns: 2fr 1fr 2fr;
@@ -164,6 +154,16 @@
     padding: 46px 60px 12px;
     grid-template-columns: max-content 1fr max-content min-content;
     background-color: $color-blue-700;
+  }
+
+  &--opened,
+  &--nojs {
+    padding-bottom: 22px;
+    background-color: $color-white;
+
+    @include desktop() {
+      background-color: $color-blue-700;
+    }
   }
 }
 
