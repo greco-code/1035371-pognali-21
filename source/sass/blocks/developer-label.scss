@@ -16,4 +16,8 @@
     font-weight: 400;
     margin-left: 10px;
   }
+
+  @include desktop() {
+    margin-left: 45px;
+  }
 }
