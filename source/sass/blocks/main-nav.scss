@@ -56,7 +56,7 @@
       background-size: 100%;
 
       @include retina() {
-        background-image: url("../img/logo-menu-mobil@2x.png");
+        background-image: url("../img/logo-menu-mobile@2x.png");
       }
 
       @include tablet() {
@@ -66,7 +66,7 @@
         background-image: url("../img/logo-menu-tablet.png");
 
         @include retina() {
-          background-image: url("../img-logo-menu-tablet@2x.png");
+          background-image: url("../img/logo-menu-tablet@2x.png");
         }
       }
     }
@@ -135,31 +135,35 @@
 
 .main-nav {
   display: grid;
+  max-width: 1440px;
+  margin-right: auto;
+  margin-left: auto;
   padding: 10px 25px 45px;
   color: $color-blue-600;
   background-color: $color-blue-700;
   grid-template-columns: 1fr 1fr;
-  max-width: 1440px;
-  margin-left: auto;
-  margin-right: auto;
 
   @include tablet() {
     padding: 40px 40px 68px;
-    grid-template-columns: 2fr 1fr 2fr;
     background-color: $color-blue-600;
+    grid-template-columns: 2fr 1fr 2fr;
   }
 
   @include desktop() {
     align-items: center;
     padding: 46px 60px 12px;
-    grid-template-columns: max-content 1fr max-content min-content;
     background-color: $color-blue-700;
+    grid-template-columns: max-content 1fr max-content min-content;
   }
 
   &--opened,
   &--nojs {
     padding-bottom: 22px;
     background-color: $color-white;
+
+    @include tablet() {
+      padding-bottom: 70px;
+    }
 
     @include desktop() {
       background-color: $color-blue-700;
@@ -242,10 +246,6 @@
   background-color: $color-yellow-100;
   grid-column: 1/-1;
 
-  &:active {
-    background-color: $color-yellow-200;
-    color: rgba($color-blue-700, 0.3);
-  }
 
   @include tablet() {
     font-size: 20px;
@@ -262,16 +262,16 @@
     margin-bottom: 0;
     padding: 17px 29px 13px;
     grid-column: 4/5;
+  }
 
-    &:hover {
-      color: rgba($color-blue-700, 1);
-      background-color: $color-yellow-200;
-    }
+  &:hover {
+    color: rgba($color-blue-700, 1);
+    background-color: $color-yellow-200;
+  }
 
-    &:active {
-      background-color: $color-yellow-200;
-      color: rgba($color-blue-700, 0.3);
-    }
+  &:active {
+    color: rgba($color-blue-700, 0.3);
+    background-color: $color-yellow-200;
   }
 }
 

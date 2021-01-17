@@ -9,23 +9,12 @@
 
   @include tablet() {
     margin-right: auto;
-    padding-left: 70px;
+    padding-left: 59px;
   }
 
   &--header {
     @include desktop() {
       display: none;
-    }
-  }
-}
-
-
-.social-list__item {
-  @include tablet() {
-    margin-right: 9px;
-
-    &:last-child {
-      margin-right: 0;
     }
   }
 }
@@ -36,23 +25,17 @@
   width: 45px;
   height: 45px;
 
-  &:active {
-    opacity: 0.3;
-  }
-
   @include tablet() {
     width: 62px;
     height: 62px;
   }
 
-  @include desktop() {
-    &:hover {
-      opacity: 0.6;
-    }
+  &:hover {
+    opacity: 0.6;
+  }
 
-    &:active {
-      opacity: 0.3;
-    }
+  &:active {
+    opacity: 0.3;
   }
 }
 

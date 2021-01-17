@@ -45,9 +45,13 @@
   display: block;
   text-transform: uppercase;
   color: $color-blue-600;
+  overflow: hidden;
+
+  &:hover {
+    opacity: 0.6;
+  }
 
   &:active {
-    color: $color-yellow-100;
     opacity: 0.3;
   }
 
@@ -69,8 +73,29 @@
     }
 
     &:active {
-      color: $color-yellow-100;
       opacity: 0.3;
+      color: $color-yellow-100;
     }
+  }
+}
+
+// Hover effect
+@include desktop() {
+  .site-list__link-transition {
+    position: relative;
+    display: flex;
+    transition: transform 0.3s;
+
+    &::after {
+      position: absolute;
+      top: 200%;
+      left: 0;
+      content: attr(data-hover);
+      transform: translate3d(0, 0, 0);
+    }
+  }
+
+  .site-list__link:hover .site-list__link-transition {
+    transform: translateY(-200%);
   }
 }
